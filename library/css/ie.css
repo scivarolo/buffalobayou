@@ -1415,6 +1415,12 @@ footer nav li a {
 .social-footer {
   padding-top: 30px; }
 
+/*******************************************************
+EVENT Styles
+*******************************************************/
+.single-tribe_events .tribe-events-single .tribe-events-single-event-title {
+  font-size: 2.75em; }
+
 /******************************************************************
 Stylesheet: Desktop Stylsheet
 ******************************************************************/

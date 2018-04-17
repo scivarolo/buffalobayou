@@ -476,32 +476,32 @@ http://0to255.com/
   .navy-section h2,
   .navy-section h3,
   .navy-section h4,
-  .navy-section #tribe_events_filters_wrapper h3, #tribe_events_filters_wrapper
-  .navy-section h3,
+  .navy-section #tribe_events_filters_wrapper h3,
+  #tribe_events_filters_wrapper .navy-section h3,
   .navy-section h5,
   .navy-section h6,
   .aqua-section h1,
   .aqua-section h2,
   .aqua-section h3,
   .aqua-section h4,
-  .aqua-section #tribe_events_filters_wrapper h3, #tribe_events_filters_wrapper
-  .aqua-section h3,
+  .aqua-section #tribe_events_filters_wrapper h3,
+  #tribe_events_filters_wrapper .aqua-section h3,
   .aqua-section h5,
   .aqua-section h6,
   .green-section h1,
   .green-section h2,
   .green-section h3,
   .green-section h4,
-  .green-section #tribe_events_filters_wrapper h3, #tribe_events_filters_wrapper
-  .green-section h3,
+  .green-section #tribe_events_filters_wrapper h3,
+  #tribe_events_filters_wrapper .green-section h3,
   .green-section h5,
   .green-section h6,
   .black-section h1,
   .black-section h2,
   .black-section h3,
   .black-section h4,
-  .black-section #tribe_events_filters_wrapper h3, #tribe_events_filters_wrapper
-  .black-section h3,
+  .black-section #tribe_events_filters_wrapper h3,
+  #tribe_events_filters_wrapper .black-section h3,
   .black-section h5,
   .black-section h6 {
     color: white; }
@@ -1237,6 +1237,11 @@ p.callout,
 
 .event-category .sidebar-column {
   font-size: 1em; }
+
+.single-tribe_events .tribe-events-single .tribe-events-single-event-title {
+  font-size: 2.25em;
+  padding-bottom: 20px;
+  margin-bottom: 15px; }
 
 /******************************************************************
 GENERAL LAYOUT STYLES
@@ -3171,7 +3176,12 @@ FOOTER STYLES
     position: relative;
     text-align: right; }
   .social-footer {
-    padding-top: 30px; } }
+    padding-top: 30px; }
+  /*******************************************************
+EVENT Styles
+*******************************************************/
+  .single-tribe_events .tribe-events-single .tribe-events-single-event-title {
+    font-size: 2.75em; } }
 
 /*
 DESKTOP
