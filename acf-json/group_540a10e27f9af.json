@@ -1,0 +1,67 @@
+{
+    "key": "group_540a10e27f9af",
+    "title": "Amenities Icons",
+    "fields": [
+        {
+            "key": "field_540a10f011984",
+            "label": "Amenities",
+            "name": "amenities",
+            "type": "checkbox",
+            "instructions": "Select which amenities are available at this Destination or Feature. These will show up as icons.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "park": "Park",
+                "discgolf": "Disc Golf",
+                "skate": "Skatepark",
+                "tennis": "Tennis Courts",
+                "fitness": "Fitness Area",
+                "boatlaunch": "Boat Launch",
+                "recreation": "Recreation",
+                "landmark": "Landmark",
+                "art": "Art",
+                "cemetery": "Cemetery",
+                "bathroom": "Bathroom",
+                "bridge": "Bridge",
+                "stairs": "Stair Access",
+                "parking": "Parking",
+                "handicap": "Handicap Access",
+                "water": "Water Fountain",
+                "future": "Coming Soon"
+            },
+            "default_value": [],
+            "layout": "horizontal",
+            "toggle": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "destination"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "destination_feature"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1443733505
+}

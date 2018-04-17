@@ -1,0 +1,41 @@
+{
+    "key": "group_541b0dc638136",
+    "title": "Destination Instructions",
+    "fields": [
+        {
+            "key": "field_541b0dd0068d0",
+            "label": "Instructions",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Creating a destination does NOT automatically add it to the Visit page of the website. After creating the destination go to Pages > Visit and you will add this destination to the page.",
+            "esc_html": 0,
+            "new_lines": "wpautop"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "destination"
+            }
+        ]
+    ],
+    "menu_order": -50,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1443733479
+}

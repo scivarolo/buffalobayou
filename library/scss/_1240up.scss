@@ -1,0 +1,20 @@
+/******************************************************************
+Stylesheet: Super Large Monitor Stylesheet
+******************************************************************/
+
+#home-owl-carousel {
+	.owl-item a {
+		background-size: 1200px auto;
+		background-position: left center;
+	}
+}
+
+.owl-navigation {
+	max-width: none;
+	i {
+		margin: -200px 4% 4%;
+		margin-top: -200px;
+		font-size: 36px;
+		
+	}
+}

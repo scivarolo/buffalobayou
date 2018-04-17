@@ -1,0 +1,80 @@
+{
+    "key": "group_53a9e2d4e262c",
+    "title": "Map",
+    "fields": [
+        {
+            "key": "field_53ab05ef5342a",
+            "label": "Map?",
+            "name": "map_toggle",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Do you want to show a map for this item?",
+            "default_value": 0
+        },
+        {
+            "key": "field_53ab05a4a355e",
+            "label": "Map This",
+            "name": "map_link",
+            "type": "google_map",
+            "instructions": "If this can be mapped. Map it here.",
+            "required": 0,
+            "conditional_logic": [
+                {
+                    "rule_rule_0": {
+                        "field": "field_53ab05ef5342a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                }
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "center_lat": "29.7628",
+            "center_lng": "95.3831",
+            "zoom": "",
+            "height": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "destination"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "destination_feature"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "art"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1443733548
+}

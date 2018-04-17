@@ -1,0 +1,106 @@
+{
+    "key": "group_5335cc9c5aaf8",
+    "title": "Visit - Destination Page",
+    "fields": [
+        {
+            "key": "field_5637cc43ffcc4",
+            "label": "Features Subnav",
+            "name": "features_subnav",
+            "type": "relationship",
+            "instructions": "Select which features you would like on the sub-nav for this destination.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "destination_feature",
+                "destination"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "search",
+                "post_type",
+                "taxonomy"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "object"
+        },
+        {
+            "key": "field_5335cca0d775c",
+            "label": "Location",
+            "name": "location",
+            "type": "radio",
+            "instructions": "Select where this Destination is. This is the identifier that appears above the header.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "west": "West of Downtown",
+                "downtown": "Downtown",
+                "east": "East of Downtown",
+                "hide": "I don't want to show this!"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_5323641240a92",
+            "label": "Features",
+            "name": "features",
+            "type": "relationship",
+            "instructions": "Select the features that will be displayed on this Destination page. If there aren't any, you can leave this blank. You can select the Destination Tag from the \"Taxonomy\" dropdown to filter the list.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "destination_feature",
+                "destination"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "search",
+                "post_type",
+                "taxonomy"
+            ],
+            "elements": "",
+            "max": "",
+            "return_format": "object",
+            "min": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "destination"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1446497402
+}

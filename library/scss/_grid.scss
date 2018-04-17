@@ -1,0 +1,124 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Grid Stylesheet
+
+I've seperated the grid so you can swap it out easily. It's
+called at the top the style.scss stylesheet.
+
+There are a ton of grid solutions out there. You should definitely
+experiment with your own. Here are some recommendations:
+
+http://gridsetapp.com - Love this site. Responsive Grids made easy.
+http://susy.oddbird.net/ - Grids using Compass. Very elegant.
+http://gridpak.com/ - Create your own responsive grid.
+
+The grid below is a combination of the 1140 grid and Twitter Boostrap. 
+I liked 1140 but Boostrap's grid was way more detailed so I merged them 
+together, let's see how this works out. If you want to use 1140, the original 
+values are commented out on each line.
+
+******************************************************************/
+
+/*
+*
+* Lemonade v1.1
+* Copyright 2013, Joe Richardson
+* lemonade.im
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+*
+*/
+
+
+
+/* Set the width of the grid */
+
+
+.frame {
+  margin: 0 auto;
+  max-width: 960px;
+  width: 90%;
+}
+
+.wrap .frame {
+	width: 100%;
+}
+
+/* Attribute selector */
+[class*='bit-'] {
+  float: left;
+  padding-right: 15px;
+}
+
+/* Floats last ".bit-" to the right */
+[class*='bit-']:last-of-type {
+  float: right;
+  padding-right: 0;
+}
+
+/* Clearfix */
+.frame:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Main Widths */
+.bit-1  { width: 100%; }
+.bit-2,
+.bit-50 { width: 50%; }
+.bit-3,
+.bit-33  { width: 33%; }
+.bit-4  { width: 25%; }
+.bit-5,.bit-20  { width: 20%; }
+.bit-6  { width: 16.6666666667%; }
+.bit-7  { width: 14.2857142857%; }
+.bit-8  { width: 12.5%; }
+.bit-9  { width: 11.1111111111%; }
+.bit-10 { width: 10%; }
+.bit-11 { width: 9.09090909091%;}
+.bit-12 { width: 8.33%; }
+.bit-80 { width: 80%; }
+.bit-66 { width: 66%; }
+
+/* Landscape mobile & down */
+@media (max-width: 480px) {
+  .bit-1,
+  .bit-2, .bit-50,
+  .bit-3, .bit-33,
+  .bit-4,
+  .bit-5, .bit-20,
+  .bit-6,
+  .bit-7,
+  .bit-8,
+  .bit-9,
+  .bit-10,
+  .bit-11,
+  .bit-12,
+  .bit-80,.bit-66 {
+    width: 100%;
+  }
+}
+
+/* Portrait tablet to landscape */
+@media (min-width: 480px) and (max-width: 600px) {
+  .bit-4,
+  .bit-6,
+  .bit-8,
+  .bit-10,
+  .bit-12 {
+    width: 50%;
+  }
+
+  .bit-1,
+  .bit-2,
+
+  .bit-5,
+  .bit-7,
+  .bit-9,
+  .bit-11 {
+    width: 100%;
+  }
+}

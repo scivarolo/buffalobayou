@@ -1,0 +1,235 @@
+{
+    "key": "group_53308e7d5dda6",
+    "title": "Get Involved",
+    "fields": [
+        {
+            "key": "field_53308e9340697",
+            "label": "Volunteer Programs",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_53fce898f6717",
+            "label": "Listing",
+            "name": "listing",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": "",
+            "max": "",
+            "layout": "row",
+            "button_label": "Add Item",
+            "sub_fields": [
+                {
+                    "key": "field_53fce898f6718",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_53fce898f6719",
+                    "label": "Blurb",
+                    "name": "blurb",
+                    "type": "textarea",
+                    "instructions": "Keep this brief. A full page should be used for more longer content.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": "br",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_53fce898f671a",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "instructions": "This is 200x200. ",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": 0,
+                    "min_height": 0,
+                    "min_size": 0,
+                    "max_width": 0,
+                    "max_height": 0,
+                    "max_size": 0,
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_53fce898f671b",
+                    "label": "Link?",
+                    "name": "link_type",
+                    "type": "radio",
+                    "instructions": "Select if this will link to another page on this website, or to an external website.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "internal": "Internal",
+                        "external": "External",
+                        "no_link": "None"
+                    },
+                    "other_choice": 0,
+                    "save_other_choice": 0,
+                    "default_value": "internal",
+                    "layout": "horizontal"
+                },
+                {
+                    "key": "field_53fce898f671c",
+                    "label": "Link to page",
+                    "name": "internal_link",
+                    "type": "page_link",
+                    "instructions": "Select the page that this will link to.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_53fce898f671b",
+                                "operator": "==",
+                                "value": "internal"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "page"
+                    ],
+                    "taxonomy": [],
+                    "allow_null": 1,
+                    "multiple": 0
+                },
+                {
+                    "key": "field_53fce898f671d",
+                    "label": "External Link",
+                    "name": "external_link",
+                    "type": "text",
+                    "instructions": "If you want to link to an outside page (ex: buffalobayoupark.org) enter it here. ",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_53fce898f671b",
+                                "operator": "==",
+                                "value": "external"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_53fce898f671e",
+                    "label": "Button Text",
+                    "name": "button_text",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_53fce898f671b",
+                                "operator": "!=",
+                                "value": "no_link"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "Read More",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "2"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1443733524
+}

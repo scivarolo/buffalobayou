@@ -1,0 +1,74 @@
+{
+    "key": "group_53275c7f375dc",
+    "title": "Visit - Subfeatures on Features Page",
+    "fields": [
+        {
+            "key": "field_53275c88b25df",
+            "label": "Does this Feature have subfeatures?",
+            "name": "is_art",
+            "type": "true_false",
+            "instructions": "Example: If this is an Art section for one of the destinations, check this box. You will add each piece of art as a subfeature.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0
+        },
+        {
+            "key": "field_53275ccfb25e0",
+            "label": "Subfeature Selection",
+            "name": "art_selection",
+            "type": "relationship",
+            "instructions": "After creating the subfeatures (in the subfeature section on the left menu) This is where you attach them to this section.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_53275c88b25df",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "art"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "search",
+                "taxonomy"
+            ],
+            "elements": "",
+            "max": "",
+            "return_format": "object",
+            "min": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "destination_feature"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1443733801
+}

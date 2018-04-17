@@ -1,0 +1,133 @@
+/******************************************************************
+Stylesheet: 481px and Up Stylesheet
+******************************************************************/
+
+/******************************************************************
+OVERALL GENERAL STYLES
+******************************************************************/
+
+	/* at this larger size, we can start to align images */
+	.alignleft, img.alignleft { 
+		margin-right: 1.25em; 
+		display: inline; 
+		float: left;
+	}
+	.alignright, img.alignright { 
+		margin-left: 1.25em; 
+		display: inline; 
+		float: right; 
+	}
+	.aligncenter, img.aligncenter { 
+		margin-right: auto; 
+		margin-left: auto; 
+		display: block; 
+		clear: both; 
+		margin-bottom: 1.25em;
+	}
+	
+	.fullwidth, img.fullwidth {
+		display: block;
+		clear: both;
+		width: 100%;
+		margin-bottom: 1.25em;
+	}
+
+h1, .h1 {
+	font-size: 2.4375em; //39px
+}
+
+h2, .h2 {
+	font-size: 2.0625em; //33px
+}
+
+h3, .h3 {
+	font-size: 1.5em; //24px
+}
+
+h4, .h4 {
+	font-size: 1.25em; //20px
+	font-weight: $whitney-weight;
+}
+
+h5, .h5 {
+	font-size: 1em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+/******************************************************************
+GENERAL LAYOUT STYLES
+******************************************************************/
+
+.main-callout {
+	font-size: 21px;
+	padding-bottom: 0;
+}
+
+#content section[class*="-section"],
+section[class*="-section"] {
+	padding: 50px 0;
+	margin: 0 auto;
+}
+
+[data-type="parallax"] > div {
+	padding: 60px 0;
+}
+
+.three-columns {
+	.main-column {
+		
+	}
+	.left-column {
+		width: 50%;
+		float: left;
+		padding-right: 10px;
+	}
+	.right-column {
+		width: 50%;
+		float: right;
+		padding-left: 10px;
+	}
+}
+
+/******************************************************************
+HEADER AND NAVIGATION STYLES
+******************************************************************/
+
+#logo {
+	margin: 50px auto;
+}
+
+.sub-nav li {
+  display: inline-block;
+}
+
+/******************************************************************
+HOME PAGE STYLES
+******************************************************************/
+
+#home-destinations ul li {
+	width: 49%;
+	float: left;
+	margin-right: 2%;
+	height:250px;
+	div { height: 250px;}
+	&:nth-of-type(even) {
+		margin-right: 0;
+	}
+	span {
+		padding-top: 110px;
+	}
+}
+
+/******************************************************************
+ABOUT STYLES
+******************************************************************/
+
+.board-section {
+	width: 50%;
+	float:left;
+	p {display:block;}
+	&:first-of-type { float:none; }
+	
+}

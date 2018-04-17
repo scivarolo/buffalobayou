@@ -1,0 +1,1 @@
+jQuery(document).ready(function(e){var n=e("#home-owl-carousel");n.owlCarousel({navigation:!0,slideSpeed:1e3,paginationSpeed:1e3,singleItem:!0,navigation:!1,stopOnHover:!1,autoPlay:!0,transitionStyle:"fade"}),e(".owl-navigation .next").click(function(){n.trigger("owl.next")}),e(".owl-navigation .prev").click(function(){n.trigger("owl.prev")})});

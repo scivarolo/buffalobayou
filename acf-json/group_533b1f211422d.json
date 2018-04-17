@@ -1,0 +1,536 @@
+{
+    "key": "group_533b1f211422d",
+    "title": "Home Page",
+    "fields": [
+        {
+            "key": "field_5320c0fa3fd02",
+            "label": "Slideshow",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_52fa9ae5e74e3",
+            "label": "Home Page Slideshow",
+            "name": "home_page_slideshow",
+            "type": "gallery",
+            "instructions": "This is the homepage slideshow.\r\nIf you would like the image to link to another page, include the url in the ALTERNATE TEXT box.\r\nCaptions go in the CAPTIONS box. ",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": "",
+            "max": "",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": ""
+        },
+        {
+            "key": "field_5609b88f8c457",
+            "label": "Alerts\/Announcements",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5609b9308c45b",
+            "label": "Alert(s)",
+            "name": "home_page_alerts",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": "",
+            "max": "",
+            "layout": "block",
+            "button_label": "Add Row",
+            "sub_fields": [
+                {
+                    "key": "field_5609b8a88c458",
+                    "label": "Alert Title",
+                    "name": "alert_title",
+                    "type": "text",
+                    "instructions": "Appears at the beginning in bold. Such as \"Trail Closure\" or \"Construction Update\"",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_5609b8c98c459",
+                    "label": "Alert Color",
+                    "name": "alert_color",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "navy": "Navy",
+                        "green": "Green",
+                        "teal": "Teal",
+                        "orange": "Orange"
+                    },
+                    "other_choice": 0,
+                    "save_other_choice": 0,
+                    "default_value": "orange",
+                    "layout": "horizontal"
+                },
+                {
+                    "key": "field_5609b8fd8c45a",
+                    "label": "Alert Text",
+                    "name": "alert_text",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                }
+            ],
+            "collapsed": ""
+        },
+        {
+            "key": "field_53ac2dfd98b2a",
+            "label": "Upcoming Events",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_53ac62d358807",
+            "label": "Heading",
+            "name": "events_heading",
+            "type": "text",
+            "instructions": "This is the heading for the events section on the home page.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "formatting": "none",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_53ac2e1398b2b",
+            "label": "Featured Events",
+            "name": "featured_events",
+            "type": "relationship",
+            "instructions": "Select the three events you would like to feature here. If three events aren't selected, the remaining spaces will be auto-filled with the upcoming events.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "tribe_events"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "search",
+                "post_type",
+                "taxonomy"
+            ],
+            "elements": "",
+            "max": 3,
+            "return_format": "id",
+            "min": 0
+        },
+        {
+            "key": "field_5320c1293fd03",
+            "label": "Destinations",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5320c0673fd01",
+            "label": "Featured Destinations",
+            "name": "featured_destinations",
+            "type": "relationship",
+            "instructions": "Select four featured destinations\/features to appear on the homepage.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "destination",
+                "destination_feature"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "taxonomy"
+            ],
+            "elements": "",
+            "max": 4,
+            "return_format": "object",
+            "min": 0
+        },
+        {
+            "key": "field_5320c1373fd04",
+            "label": "Boat Tours",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5320c1713fd05",
+            "label": "Heading",
+            "name": "boat_heading",
+            "type": "text",
+            "instructions": "Heading for the Boat Tours section.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "formatting": "none",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_5320c1d73fd06",
+            "label": "Boat Tours Callout",
+            "name": "boat_callout",
+            "type": "textarea",
+            "instructions": "This is the callout text for the Boat Tours section. Don't worry, the next upcoming boat tour is automatically populated by the calendar!",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0,
+            "rows": "",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_5320c3223fd08",
+            "label": "Button Text",
+            "name": "boat_link_text",
+            "type": "text",
+            "instructions": "This is what the button will say. Keep it short.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Book a Tour",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "formatting": "none",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_5320c2cc3fd07",
+            "label": "Button Link",
+            "name": "boat_link",
+            "type": "page_link",
+            "instructions": "This is the page that the button will link to.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "taxonomy": []
+        },
+        {
+            "key": "field_53aa007f3b180",
+            "label": "Boat Tours Image",
+            "name": "boat_tours_image",
+            "type": "image",
+            "instructions": "This is the background image for the Boat tours section of the homepage.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "bones-thumb-300",
+            "library": "all",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": ""
+        },
+        {
+            "key": "field_5649f8c422da1",
+            "label": "Extra Section",
+            "name": "extra_section",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5649f9d122da7",
+            "label": "Section Toggle",
+            "name": "extra_section_toggle",
+            "type": "true_false",
+            "instructions": "Uncheck to hide this section.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 50,
+                "class": "",
+                "id": ""
+            },
+            "message": "Show this section",
+            "default_value": 1
+        },
+        {
+            "key": "field_5649f98622da6",
+            "label": "Section Color",
+            "name": "extra_section_color",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 50,
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "green": "green",
+                "orange": "orange",
+                "navy": "navy",
+                "aqua": "aqua"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_5649f8f522da2",
+            "label": "Section Heading",
+            "name": "extra_section_heading",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_5649f91422da3",
+            "label": "Section Text",
+            "name": "extra_section_text",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "visual",
+            "toolbar": "basic",
+            "media_upload": 0
+        },
+        {
+            "key": "field_5649f93422da4",
+            "label": "Section Link",
+            "name": "extra_section_link",
+            "type": "page_link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [],
+            "taxonomy": [],
+            "allow_null": 0,
+            "multiple": 0
+        },
+        {
+            "key": "field_5649f96822da5",
+            "label": "Section Link Text",
+            "name": "extra_section_link_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "6"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1447689210
+}

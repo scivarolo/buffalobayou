@@ -1,0 +1,45 @@
+{
+    "key": "group_560da27440a58",
+    "title": "Features Subnav Label",
+    "fields": [
+        {
+            "key": "field_560da28737b1b",
+            "label": "Shorter Label",
+            "name": "features_shorter_label",
+            "type": "text",
+            "instructions": "Sometimes a feature has a long name that can be shortened to clean up the subnav (such as Barbara Fish Daniel Nature Play Area and Picnic Pavilion). You can leave this blank if the title is already short.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "destination_feature"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1443734218
+}

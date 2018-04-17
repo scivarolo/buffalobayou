@@ -1,0 +1,48 @@
+{
+    "key": "group_53ac6b519f7a1",
+    "title": "Events Instructions",
+    "fields": [
+        {
+            "key": "field_53ac6b59a3533",
+            "label": "How to Create an Event!",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Requirements:\r\n\r\nFeatured Image : This is the image that will appear on the home page, on the event page, and on the calendar views. \r\n\r\nExcerpt : Enter an abbreviated excerpt\/blurb. This is what appears on the homepage, and on the different calendar views. The Event page will display the full info you enter in the content box.\r\n\r\nNOTE ON SIDEBARS:\r\nThe \"Sidebar\" section is what will appear at the bottom of the column (below the map). The \"Sidebar 2\" section is what appears above the event info in the column.",
+            "esc_html": 0,
+            "new_lines": "wpautop"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "tribe_events"
+            }
+        ]
+    ],
+    "menu_order": -5,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "custom_fields",
+        "discussion",
+        "comments",
+        "author",
+        "format",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1443733486
+}

@@ -1,0 +1,83 @@
+{
+    "key": "group_5328ca7366e37",
+    "title": "Thumbnail and Excerpt",
+    "fields": [
+        {
+            "key": "field_5328ca7db5839",
+            "label": "image_thumbnail",
+            "name": "image_thumbnail",
+            "type": "image",
+            "instructions": "This is the Image that is used as the thumbnail for this item throughout the website. ",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": ""
+        },
+        {
+            "key": "field_53309dd6903ba",
+            "label": "Excerpt",
+            "name": "excerpt",
+            "type": "textarea",
+            "instructions": "This is the excerpt that appears on other pages of the site. Keep it short.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "readonly": 0,
+            "disabled": 0,
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "destination"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "destination_feature"
+            }
+        ],
+        [
+            {
+                "param": "page_parent",
+                "operator": "==",
+                "value": "2"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1443733580
+}

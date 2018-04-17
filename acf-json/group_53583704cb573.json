@@ -1,0 +1,163 @@
+{
+    "key": "group_53583704cb573",
+    "title": "Event Categories Template",
+    "fields": [
+        {
+            "key": "field_530d0af54e43f",
+            "label": "Event Section",
+            "name": "event_section",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": "",
+            "max": "",
+            "layout": "block",
+            "button_label": "Add Event Section",
+            "sub_fields": [
+                {
+                    "key": "field_530d0d3983d56",
+                    "label": "Section Heading",
+                    "name": "section_heading",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_530d0b584e440",
+                    "label": "Event Category",
+                    "name": "event_category",
+                    "type": "taxonomy",
+                    "instructions": "Select the Event Category that relates to this Section. This is what links the events for display here. ",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "taxonomy": "tribe_events_cat",
+                    "field_type": "select",
+                    "allow_null": 0,
+                    "load_save_terms": 0,
+                    "return_format": "id",
+                    "multiple": 0,
+                    "add_term": 1,
+                    "load_terms": 0,
+                    "save_terms": 0
+                },
+                {
+                    "key": "field_530d0c4f4e441",
+                    "label": "Event Details",
+                    "name": "event_details",
+                    "type": "wysiwyg",
+                    "instructions": "This is where you enter the info for this type of event.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "tabs": "all"
+                },
+                {
+                    "key": "field_54106938274ec",
+                    "label": "Sidebar Heading",
+                    "name": "dates_heading",
+                    "type": "text",
+                    "instructions": "This is the heading that appears above the sidebar (ex: Upcoming Tours)",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_547dea3442d24",
+                    "label": "Show Dates",
+                    "name": "show_dates",
+                    "type": "true_false",
+                    "instructions": "Uncheck this to hide upcoming dates. This will also hide the message that says there are no upcoming dates. ",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 1
+                },
+                {
+                    "key": "field_547dea7642d25",
+                    "label": "Sidebar Text",
+                    "name": "dates_sidebar_text",
+                    "type": "wysiwyg",
+                    "instructions": "If dates are showing, content here will appear below them. If dates are hidden, this is all that will appear in the sidebar.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 0
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-eventcategory.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1443733510
+}

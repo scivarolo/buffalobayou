@@ -1,0 +1,43 @@
+/******************************************************************
+Site Name: Buffalo Bayou Partnership
+Author: CORE Design Studio
+
+Stylesheet: IE Stylesheet
+******************************************************************/
+
+/*
+Remember, all the BASE styles are called already since IE can
+read those. Below, we need to import only the stuff IE can't 
+understand (what's inside the media queries). We also need to
+import the mixins file so SASS can understand the variables.
+*/
+
+/* import mixins */
+@import "mixins";
+
+@import "grid";
+@import "481up";
+@import "768up";
+@import "1030up";
+
+.lt-ie9 {
+  .home-event {
+    background-color: $bbp-green;
+  	.date { background-color: $bbp-green; }
+  }
+
+	#home-destinations ul > li {
+		background-color: $bbp-green;
+		width: 48%;
+		+ li, 
+		+ li + li + li {
+			padding-right: 0;
+		}
+	}
+	#footer-logo {
+  	background: url(../images/footer-logo.png);
+  }
+  .one-third {
+  	width: 28%;
+	}
+}

@@ -1,0 +1,436 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Mixins & Constants Stylesheet
+
+This is where you can take advantage of Sass' great features:
+Mixins & Constants. I won't go in-depth on how they work exactly,
+there are a few articles below that will help do that. What I will
+tell you is that this will help speed up simple changes like
+changing a color or adding CSS3 techniques gradients.
+
+A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+remember less is more.
+
+******************************************************************/
+
+html {
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+
+/*********************
+CLEARFIXIN'
+*********************/
+
+// Contain floats: nicolasgallagher.com/micro-clearfix-hack/
+.clearfix,
+%clearfix {
+  zoom: 1;
+	&:before, &:after { content: ""; display: table; }
+	&:after { clear: both; }
+}
+
+@mixin clearfix {
+	zoom: 1;
+	&:before, &:after { 
+		content: "";
+		display: table;
+	}
+	&:after { 
+		clear: both;
+	}
+}
+
+/*********************
+TOOLS
+*********************/
+
+// http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
+.image-replacement {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+
+// BBP Colors
+
+$bbp-navy: #004b64;
+$bbp-aqua: #22b4c3;
+$bbp-green: #93bf3a;
+$bbp-orange: #f16021;
+$bbp-gray: #b7c9bb;
+$bbp-black: #3b3b3b;
+
+$four-colors: $bbp-green, $bbp-aqua, $bbp-navy, $bbp-orange;
+
+// Bones Colors
+
+$alert-yellow:      #ebe16f;
+$alert-red:         #fbe3e4;
+$alert-green:       #e6efc2;
+$alert-blue:        #d5edf8;
+
+$black:             #000;
+$white:             #fff;
+
+$bones-pink:        #f01d4f;
+$bones-blue:        #1990db;
+
+$link-color:        $bbp-green;
+$link-hover:        darken($link-color, 9%);
+
+/* Background Colors for sections */
+
+.orange-section {
+	background-color: $bbp-orange;
+	
+}
+.navy-section {
+	background-color: $bbp-navy;
+}
+.aqua-section {
+	background-color: $bbp-aqua;
+}
+.green-section {
+	background-color: $bbp-green;
+}
+.black-section {
+	background-color: $bbp-black;
+}
+.gray-section {
+	background-color: lighten($bbp-gray, 22%);
+}
+
+.orange-section,
+.navy-section,
+.aqua-section,
+.green-section,
+.black-section {
+	color: white;
+	h1,h2,h3,h4,h5,h6 {
+		color: white;
+	}
+}
+
+@mixin bg-opacity($color, $alpha:1) {
+	background-color: $color; //fallback
+	background-color: rgba($color, $alpha);
+}
+
+/*********************
+TYPOGRAPHY
+*********************/
+
+
+$archer: 'Archer SSm A', 'Archer SSm B', Georgia, 'Times New Roman', Times, serif;
+$whitney: 'Whitney A', 'Whitney B', Helvetica, Arial, sans-serif;
+
+$archer-weight: 500;
+$archer-bold-weight: 700;
+
+$whitney-weight: 300;
+$whitney-bold-weight: 500;
+
+
+$serif: $archer;
+$sans-serif: $whitney;
+//$sans-serif:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+//$serif:             "Georgia", Cambria, Times New Roman, Times, serif;
+
+
+@mixin cloud-typography ($typeface, $weight, $style) {
+	font-family: $typeface;
+	font-weight: $weight;
+	font-style: $style;
+}
+
+// text alignment
+
+.text-left   { text-align: left; }
+.text-center { text-align: center; }
+.text-right  { text-align: right; }
+
+%no-hyphens {
+	-webkit-hyphens: none;
+  -epub-hyphens: none;
+  -moz-hyphens: none;
+  hyphens: none;
+}
+
+
+// weather icons
+
+@font-face {
+    font-family: 'weather';
+    src: url('../fonts/artill_clean_icons-webfont.eot');
+    src: url('../fonts/artill_clean_icons-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/artill_clean_icons-webfont.woff') format('woff'),
+         url('../fonts/artill_clean_icons-webfont.ttf') format('truetype'),
+         url('../fonts/artill_clean_icons-webfont.svg#artill_clean_weather_iconsRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+#weather i {
+  color: $bbp-aqua;
+  font-family: weather;
+  font-size: 36px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.0;
+  text-transform: uppercase;
+}
+
+.icon-0:before { content: ":"; }
+.icon-1:before { content: "p"; }
+.icon-2:before { content: "S"; }
+.icon-3:before { content: "Q"; }
+.icon-4:before { content: "S"; }
+.icon-5:before { content: "W"; }
+.icon-6:before { content: "W"; }
+.icon-7:before { content: "W"; }
+.icon-8:before { content: "W"; }
+.icon-9:before { content: "I"; }
+.icon-10:before { content: "W"; }
+.icon-11:before { content: "I"; }
+.icon-12:before { content: "I"; }
+.icon-13:before { content: "I"; }
+.icon-14:before { content: "I"; }
+.icon-15:before { content: "W"; }
+.icon-16:before { content: "I"; }
+.icon-17:before { content: "W"; }
+.icon-18:before { content: "U"; }
+.icon-19:before { content: "Z"; }
+.icon-20:before { content: "Z"; }
+.icon-21:before { content: "Z"; }
+.icon-22:before { content: "Z"; }
+.icon-23:before { content: "Z"; }
+.icon-24:before { content: "E"; }
+.icon-25:before { content: "E"; }
+.icon-26:before { content: "3"; }
+.icon-27:before { content: "a"; }
+.icon-28:before { content: "A"; }
+.icon-29:before { content: "a"; }
+.icon-30:before { content: "A"; }
+.icon-31:before { content: "6"; }
+.icon-32:before { content: "1"; }
+.icon-33:before { content: "6"; }
+.icon-34:before { content: "1"; }
+.icon-35:before { content: "W"; }
+.icon-36:before { content: "1"; }
+.icon-37:before { content: "S"; }
+.icon-38:before { content: "S"; }
+.icon-39:before { content: "S"; }
+.icon-40:before { content: "M"; }
+.icon-41:before { content: "W"; }
+.icon-42:before { content: "I"; }
+.icon-43:before { content: "W"; }
+.icon-44:before { content: "a"; }
+.icon-45:before { content: "S"; }
+.icon-46:before { content: "U"; }
+.icon-47:before { content: "S"; }
+
+
+// alerts and notices
+%alert {
+	margin: 10px;
+	padding: 5px 18px;
+	border: 1px solid;
+}
+
+.alert-help {
+	@extend %alert;
+	border-color: darken($alert-yellow, 5%);
+	background: $alert-yellow;
+}
+
+.alert-info {
+	@extend %alert;
+	border-color: darken($alert-blue, 5%);
+	background: $alert-blue;
+}
+
+.alert-error {
+	@extend %alert;
+	border-color: darken($alert-red, 5%);
+	background: $alert-red;
+}
+
+.alert-success {
+	@extend %alert;
+	border-color: darken($alert-green, 5%);
+	background: $alert-green;
+}
+
+/*********************
+TRANSITION
+*********************/
+
+/*
+I totally rewrote this to be cleaner and easier to use.
+You'll need to be using Sass 3.2+ for these to work.
+Thanks to @anthonyshort for the inspiration on these.
+USAGE: @include transition(all 0.2s ease-in-out);
+*/
+
+@mixin transition($transition...) {
+	// defining prefixes so we can use them in mixins below
+	$prefixes:      ("-webkit",  "");
+  @each $prefix in $prefixes {
+    #{$prefix}-transition: $transition;
+  }
+
+  transition: $transition;
+}
+
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can
+really slow down your CSS. Don't overdo it.
+*********************/
+
+/* @include css-gradient(#dfdfdf,#f8f8f8); */
+@mixin css-gradient($from: #dfdfdf, $to: #f8f8f8) {
+	background-color: $to;
+	background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+	background-image: -webkit-linear-gradient(top, $from, $to);
+	background-image: -moz-linear-gradient(top, $from, $to);
+	background-image: -o-linear-gradient(top, $from, $to);
+	background-image: linear-gradient(to bottom, $from, $to);
+}
+
+/*********************
+BOX SIZING
+*********************/
+
+/* @include box-sizing(border-box); */
+/* NOTE: value of "padding-box" is only supported in Gecko. So
+probably best not to use it. I mean, were you going to anyway? */
+@mixin box-sizing($type: border-box) {
+	-webkit-box-sizing: $type;
+	-moz-box-sizing:    $type;
+	-ms-box-sizing:     $type;
+	box-sizing:         $type;
+}
+
+
+/*********************
+BUTTONS
+*********************/
+
+@mixin button($color: $bbp-green, $hover-color: white) {
+	font-family: $sans-serif;
+	font-weight: $whitney-weight;
+	font-size: 15px;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 1px;
+	
+	background-color: $color;
+	color: white;
+	&:hover, &:focus {
+    background-color: white;	
+		background-color: rgba(0,0,0,0);
+		color: $color;
+	}
+	
+	&:active {
+		background-color: lighten($color, 10%);
+	}
+	
+	border: 1px solid $color;
+	padding: 4px 13px;
+	display: inline-block;
+	cursor: pointer;
+	margin: 15px 10px;
+	line-height: 26px;
+	//border-radius: 4px;
+	@include transition(all 0.25s ease);
+	
+	&.clear {
+	  background: none;
+		background: rgba(255,255,255,0.25);
+		color: white;
+		border: 1px solid white;
+		&:hover, &:focus, &:active {
+			background-color: $color;
+			
+		}
+	}
+}
+
+
+
+.button, .button:visited {
+	@include button($bbp-green);
+}
+
+.button.aqua, .button.aqua:visited {
+	@include button($bbp-aqua);
+}
+
+.button.orange, .button.orange:visited {
+	@include button($bbp-orange);
+}
+
+.button.green, .button.green:visited {
+	@include button($bbp-green);
+
+}
+
+.button.navy, .button.navy:visited {
+	@include button($bbp-navy);
+}
+
+.button.white, .button.white:visited {
+	@include button(white, $bbp-green);
+}
+
+.button.gray, .button.gray:visited {
+	@include button($bbp-gray);
+		&.clear {
+		border: 1px solid $bbp-gray;
+		color: $bbp-gray;
+		&:hover {
+			color: white;
+		}
+	}
+}
+
+.button.left {
+	margin-left: 0;
+}
+
+.button.right {
+	margin-right: 0;
+}
+
+.button.large {
+	padding: 4px 13px;
+	font-size: 16px;
+	line-height: 26px;
+	letter-spacing: 1px;
+}
+
+.button.xlarge {
+	padding: 8px 18px;
+	font-size: 18px;
+	line-height: 29px;
+	letter-spacing: 1px;
+}
+.button.small {
+  font-size:12px;
+  padding: 1px 10px;
+}
+
+.button.top {
+  margin-top: 0;
+}

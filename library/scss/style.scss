@@ -1,0 +1,77 @@
+/******************************************************************
+Site Name: Buffalo Bayou Partnership
+Author: CORE Design Studio
+ 
+Stylesheet: Main Stylesheet
+******************************************************************/
+
+@import "bourbon";
+
+@import "normalize";
+
+@import "mixins";
+
+@import "icons";
+
+/*
+BASE (MOBILE) SIZE
+*/
+
+@import "base";
+
+/*
+LARGER MOBILE DEVICES
+*/
+@media only screen and (min-width: 481px) {
+
+	@import "481up";
+
+} // end of media query
+
+/*
+TABLET & SMALLER LAPTOPS
+*/
+@media only screen and (min-width: 768px) {
+
+	@import "grid";
+
+	@import "768up";
+
+} // end of media query
+
+/*
+DESKTOP
+*/
+@media only screen and (min-width: 1030px) {
+
+	@import "1030up";
+
+} // end of media query
+
+/*
+LARGE VIEWING SIZE
+*/
+@media only screen and (min-width: 1400px) { //1240
+
+	@import "1240up";
+
+} // end of media query
+
+/*
+RETINA (2x RESOLUTION DEVICES)
+*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5),
+       only screen and (min-device-pixel-ratio: 1.5) {
+
+	// styles in 2x.scss
+	@import "2x";
+
+} // end of media query
+
+/*
+PRINT STYLESHEET
+*/
+@media print {
+	@import "print";
+}

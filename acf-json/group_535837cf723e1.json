@@ -1,0 +1,510 @@
+{
+    "key": "group_535837cf723e1",
+    "title": "Main Content Area",
+    "fields": [
+        {
+            "key": "field_5358386ef7da1",
+            "label": "Main Content Area",
+            "name": "main_content_area",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "button_label": "Add Element",
+            "min": "",
+            "max": "",
+            "layouts": [
+                {
+                    "key": "5358389c7a908",
+                    "name": "heading",
+                    "label": "Heading",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_535838c9f7da2",
+                            "label": "Text",
+                            "name": "text",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "formatting": "html",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "535838ddf7da3",
+                    "name": "text",
+                    "label": "Text",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_535838fdf7da4",
+                            "label": "Text",
+                            "name": "text",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "basic",
+                            "media_upload": 1
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "53583939f7da5",
+                    "name": "image",
+                    "label": "Image",
+                    "display": "table",
+                    "sub_fields": [
+                        {
+                            "key": "field_53583944f7da6",
+                            "label": "Image",
+                            "name": "image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": 0,
+                            "min_height": 0,
+                            "min_size": 0,
+                            "max_width": 0,
+                            "max_height": 0,
+                            "max_size": 0,
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5358396af7da7",
+                            "label": "Alignment",
+                            "name": "alignment",
+                            "type": "radio",
+                            "instructions": "Choose whether you want the image to be full-width or if you want it to be aligned left or right with text wrapping around it.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "full": "Full Width",
+                                "left": "Left-aligned",
+                                "right": "Right-aligned",
+                                "center": "Centered not full width"
+                            },
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "",
+                            "layout": "vertical"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "53583a02f7da8",
+                    "name": "button",
+                    "label": "Button(s)",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_53d811efda409",
+                            "label": "Button Options",
+                            "name": "button_options",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "min": "",
+                            "max": "",
+                            "layout": "row",
+                            "button_label": "Add Button",
+                            "sub_fields": [
+                                {
+                                    "key": "field_53583a08f7da9",
+                                    "label": "Button Text",
+                                    "name": "button_text",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": "",
+                                    "formatting": "none",
+                                    "readonly": 0,
+                                    "disabled": 0
+                                },
+                                {
+                                    "key": "field_53583a3bf7daa",
+                                    "label": "Button Color",
+                                    "name": "button_color",
+                                    "type": "radio",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "aqua": "aqua",
+                                        "green": "green",
+                                        "orange": "orange",
+                                        "navy": "navy"
+                                    },
+                                    "other_choice": 0,
+                                    "save_other_choice": 0,
+                                    "default_value": "",
+                                    "layout": "horizontal"
+                                },
+                                {
+                                    "key": "field_53583cb3f7dad",
+                                    "label": "Link Type",
+                                    "name": "link_type",
+                                    "type": "radio",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "internal": "internal",
+                                        "external": "external"
+                                    },
+                                    "other_choice": 0,
+                                    "save_other_choice": 0,
+                                    "default_value": "",
+                                    "layout": "horizontal"
+                                },
+                                {
+                                    "key": "field_53583b03f7dab",
+                                    "label": "Page Link",
+                                    "name": "page_link",
+                                    "type": "page_link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_53583cb3f7dad",
+                                                "operator": "==",
+                                                "value": "internal"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "post_type": [
+                                        "post",
+                                        "page",
+                                        "news",
+                                        "destination",
+                                        "art",
+                                        "destination_feature",
+                                        "tribe_events"
+                                    ],
+                                    "taxonomy": [
+                                        
+                                    ],
+                                    "allow_null": 0,
+                                    "multiple": 0
+                                },
+                                {
+                                    "key": "field_53583c91f7dac",
+                                    "label": "url",
+                                    "name": "url",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_53583cb3f7dad",
+                                                "operator": "==",
+                                                "value": "external"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "http:\/\/",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": "",
+                                    "formatting": "none",
+                                    "readonly": 0,
+                                    "disabled": 0
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "53583d471c300",
+                    "name": "callout",
+                    "label": "Callout",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_53583d501c301",
+                            "label": "Text",
+                            "name": "text",
+                            "type": "textarea",
+                            "instructions": "Use this field to insert a larger callout. ",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "readonly": 0,
+                            "disabled": 0,
+                            "new_lines": "br"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "53d81416de5d6",
+                    "name": "events",
+                    "label": "Events",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_53d81420de5d7",
+                            "label": "Events Heading",
+                            "name": "events_heading",
+                            "type": "text",
+                            "instructions": "Heading for the events section. If you don't want a heading, you can leave this blank.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "Upcoming Events",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_53d8145fde5d8",
+                            "label": "Category or Custom Selection",
+                            "name": "category_or_custom_selection",
+                            "type": "radio",
+                            "instructions": "Do you want to automatically list the events in a specific category? Or do you want to make a custom list?",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "category": "category",
+                                "custom": "custom"
+                            },
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "",
+                            "layout": "horizontal"
+                        },
+                        {
+                            "key": "field_53d814acde5d9",
+                            "label": "Choose an Event Category",
+                            "name": "choose_an_event_category",
+                            "type": "taxonomy",
+                            "instructions": "Choose the event category here. You can choose multiple categories. ",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_53d8145fde5d8",
+                                        "operator": "==",
+                                        "value": "category"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "taxonomy": "tribe_events_cat",
+                            "field_type": "multi_select",
+                            "allow_null": 0,
+                            "load_save_terms": 0,
+                            "return_format": "id",
+                            "multiple": 0,
+                            "add_term": 1,
+                            "load_terms": 0,
+                            "save_terms": 0
+                        },
+                        {
+                            "key": "field_53d81588de5da",
+                            "label": "Choose Events",
+                            "name": "choose_events",
+                            "type": "relationship",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_53d8145fde5d8",
+                                        "operator": "==",
+                                        "value": "custom"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "tribe_events"
+                            ],
+                            "taxonomy": [
+                                
+                            ],
+                            "filters": [
+                                "search",
+                                "post_type",
+                                "taxonomy"
+                            ],
+                            "elements": "",
+                            "max": "",
+                            "return_format": "id",
+                            "min": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-sidebar-left.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-sidebar-right.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-sidebars.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-no-sidebar.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "custom_fields",
+        "discussion",
+        "comments",
+        "author",
+        "format",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1443805990
+}

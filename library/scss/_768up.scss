@@ -1,0 +1,743 @@
+/******************************************************************
+Stylesheet: Tablet & Small Desktop Stylesheet
+******************************************************************/
+.logged-in {
+  header nav.main-nav.sticky {
+    top: 30px;
+  }
+  nav.sub-nav.sticky:first-of-type {
+    margin-top: 80px;
+  }
+}
+/******************************************************************
+GENERAL LAYOUT STYLES
+******************************************************************/
+
+.wrap {
+	max-width: 960px;
+}
+
+#inner-content {
+	margin-top: 50px;
+}
+
+.intro {
+	.intro-text p {
+		font-size: 1.5em;
+		line-height: 1.6;
+		font-family: $sans-serif;
+		font-weight: $whitney-weight;
+		margin-top: .75em;
+		margin-bottom: 0;
+	}
+}
+
+
+//Sidebar Templates begin here
+
+.three-columns {
+	position:relative;
+	.main-column {
+		width: 60%;
+		float:right;
+		margin-right:20%;
+		margin-left: -80%;
+		}
+	.left-column {
+		width: 20%;
+		float: left;
+		padding-right: 20px;
+	}
+	.right-column {
+		width: 20%;
+		float: right;
+		padding-left: 20px;
+	}
+}
+
+.no-sidebar,
+.has-sidebar {
+  .main-column {
+    width:70%;
+  }
+}
+
+.no-sidebar .main-column {
+  margin: 0 auto;
+}
+
+.has-sidebar {
+	.sidebar-column {
+		width: 30%;
+	}
+	&.left-sidebar {
+		.main-column {
+			float: right;
+			padding-left: 20px;
+		}
+		.sidebar-column {
+			float: left;
+			padding-right: 10px;
+		}
+	}
+	&.right-sidebar {
+		.main-column {
+			float: left;
+			padding-right: 20px;
+		}
+		.sidebar-column {
+			float: right;
+			padding-left: 10px;
+		}
+	}
+}
+
+.header-left {
+	@include clearfix;
+	header {
+		width: 30%;
+		float: left;
+	}
+	article {
+		width: 70%;
+		float:right;
+	}
+}
+
+.thirty-seventy {
+	@include clearfix;
+	> div:first-of-type {
+		width: 30%;
+		float:left;
+	}
+	> div:last-of-type {
+		width: 70%;
+		float:right;
+	}
+}
+
+.wrap.text-center {
+	article {
+		padding: 0 9%;
+	}
+}
+
+.main-callout {
+	font-size: 27px;
+}
+
+ul.features-list {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-align-items: stretch;
+	align-items: stretch;
+
+	li {
+		float:left;
+		width: 50%;
+		padding: 30px 20px 20px;
+		border-bottom: 1px solid $bbp-gray;
+
+		img {
+			float: left;
+			border-radius: 50%;
+			display:inline-block;
+			width: 30%;
+			margin-top: 40px;
+		}
+
+		.feature-content {
+			float:right;
+			display:inline-block;
+			width: 70%;
+			padding-left: 20px;
+			&.no-image {
+  			width: 100%;
+  			padding-left: 0;
+			}
+			p {
+				font-size: 14px;
+			}
+		}
+
+		h3 {
+			text-align: left;
+			font-size: 1.4em;
+		}
+		a.button {
+			margin: 15px 0 15px 0;
+		}
+	}
+
+	li:nth-of-type(odd) { //left column
+		padding-left: 0;
+		border-right: 1px solid $bbp-gray;
+	}
+	li:nth-of-type(even) { //right column
+		padding-right: 0;
+	}
+	li:nth-of-type(odd):nth-last-of-type(2),
+	li:last-of-type { //last one in left column
+		border-bottom: none;
+	}
+	li:last-of-type { //last one in right column
+
+	}
+}
+
+.no-flexbox {
+  ul.features-list {
+    @include clearfix;
+    li {
+      float:right;
+      border: none!important;
+      width: 85%;
+      padding: 30px 20px 20px!important;
+      img {
+        width:22%;
+        margin-top:20px;
+      }
+    }
+  }
+}
+
+
+/******************************************************************
+HEADER AND NAVIGATION STYLES
+******************************************************************/
+
+#weather,
+#social-icons {
+	display: block;
+	width: 50%;
+	float:left;
+	z-index: 1;
+}
+#weather {
+	padding: 6px 0 0 15px;
+	i {
+		float: left;
+	}
+	span {
+	  display:inline-block;
+		margin: 7px 0 0 10px;
+		font-size: 12px;
+		cursor: default;
+	}
+	.attribution {
+    display:none;
+  }
+}
+
+#social-icons {
+	padding: 10px 10px 0 0;
+	text-align: right;
+	a {
+		margin:4px 10px 0 0;
+		i { font-size: 28px; }
+		display:block;
+		float:right;
+		&.button {
+			margin-top: 0;
+		}
+	}
+}
+#inner-header {
+  max-width: 1000px;
+  margin: 0 auto;
+  clear: both;
+}
+
+#logo {
+  margin: 50px auto;
+}
+
+header nav {
+  background-color: $bbp-green;
+	background-color: rgba($bbp-green, 0.9);
+}
+
+nav.mobile {
+  display: none;
+}
+
+.nav {
+	border: 0;
+	font-size:0;
+	position:relative;
+
+	ul {
+		margin-top: 0;
+		font-size: 16px;
+	}
+	> li > a {
+		font-size: 20px;
+		height: 50px;
+		line-height: 1.5;
+	}
+	> li {
+		display:inline-block;
+		vertical-align:bottom;
+
+		&:hover > a {
+			background-color: darken($bbp-green, 3%);
+		}
+
+		a {
+			border-bottom: 0;
+
+			&:hover, &:focus {
+				background-color: darken($bbp-green, 3%);
+				color:white;
+
+			}
+		}
+		ul.sub-menu,
+		ul.children {
+			margin-top: 0;
+			border-top: 0;
+			position: absolute;
+			overflow: hidden;
+			visibility: hidden;
+			z-index: 8999;
+			font-size: 16px;
+			li {
+				a {
+					padding-left: 20px;
+					border-right: 0;
+					display: block;
+					min-width:180px;
+					background-color: darken($bbp-green, 3%);
+					font-size: 1em;
+					&:hover,
+					&:focus {
+						background-color: $bbp-green;
+					}
+				}
+				&:last-child {
+					a {
+						border-bottom: 0;
+					}
+				}
+			}
+      li.current-menu-item,
+			li.current_page_item,
+			li.current-page-ancestor {
+				a {
+					background-color: darken($bbp-green, 9%);
+					color:white;
+				}
+			}
+		}
+		&:hover ul {
+			top: auto;
+			overflow: visible;
+			visibility:visible;
+		}
+
+	} /* end .menu ul li */
+
+	/* highlight current page */
+	li.current-menu-item,
+	li.current_page_item,
+	li.current-page-ancestor {
+		a {
+			background-color: darken($bbp-green, 5%);
+			color:white;
+		}
+	}  /* end current highlighters */
+
+} /* end .nav */
+
+
+nav.main-nav,
+nav.sub-nav {
+  display:block;
+}
+
+.main-nav a.logo-btn {
+  position:absolute;
+  left: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  text-indent: -9999px;
+}
+.main-nav {
+  position:relative;
+}
+
+nav.sub-nav {
+	display:inherit;
+	font-size: 1em;
+}
+
+nav ul {
+  max-width:1000px;
+}
+
+nav.sub-nav {
+	font-family: $sans-serif;
+	font-weight: $whitney-weight;
+	background-color: lighten($bbp-gray, 20%);
+	background-color: rgba(lighten($bbp-gray,20%), 0.95);
+	ul {
+		margin: 0 auto;
+		max-width: 1000px;
+		padding: 10px;
+		li {
+			display: inline-block;
+			a {
+  			padding: 5px 10px 5px 10px;
+  			color: $bbp-aqua;
+			}
+			&.current a, a:hover {
+  			background-color: $bbp-aqua;
+        color: white;
+			}
+			&.heading {
+        font-family: $serif;
+        font-weight: $archer-weight;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: darken($bbp-gray, 10%);
+        font-size: 0.75em;
+        padding: 5px;
+        &:first-of-type {
+          padding-left: 10px;
+        }
+			}
+		}
+	}
+}
+
+nav.main-nav {
+	z-index: 999;
+}
+
+header nav.main-nav.sticky,
+nav.sub-nav.sticky {
+	display:inherit;
+	position:fixed;
+	top: 0;
+	width:100%;
+	}
+
+nav.sub-nav {
+	position:relative;
+	z-index: 998;
+}
+
+nav.sub-nav.sticky {
+		margin-top: 50px;
+	+ div, + section {
+		margin-top: 44px + 52px;
+	}
+	+ div#map-canvas {
+  	margin-top: 76px + 52px;
+	}
+}
+
+
+.flexbox .nav {
+  display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: stretch;
+	align-items: stretch;
+	> li {
+  	flex-grow: 1;
+  	-webkit-flex-grow: 1;
+  	> a {
+    	text-align: center;
+  	}
+	}
+}
+
+
+/******************************************************************
+HOME PAGE STYLES
+******************************************************************/
+
+#home-owl-carousel {
+	.item {
+		height: 400px;
+	}
+}
+
+.events {
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -webkit-align-items: stretch;
+  align-items: stretch;
+}
+
+#home-destinations ul {
+	div {
+		height: 200px;
+	}
+	span {
+		font-size: 28px;
+		line-height: 1.5;
+		padding-top: 85px;
+	}
+}
+
+
+/******************************************************************
+VISIT STYLES
+******************************************************************/
+
+.single-feature {
+  .feature-image {
+    width: 31.25%;
+    float:left;
+    margin-top: 53px;
+  }
+  .feature-content {
+    h2 {
+      margin: 0;
+    }
+    width: 67%;
+    float:right;
+  }
+}
+
+.sub-feature {
+  .sub-feature-image {
+    margin-right: 15px;
+    border-radius: 50%;
+    float:left;
+  }
+  h3 {
+    text-align: left;
+  }
+}
+
+.art-info {
+  text-align: left;
+}
+
+/******************************************************************
+CALENDAR STYLES
+******************************************************************/
+
+.tribe-events-calendar td div[id*="tribe-events-daynum-"] {
+	padding: 8px 8px;
+	line-height: 1.2;
+	display:block;
+	float:right;
+	background-color:lighten($bbp-gray,20%);
+	height: 30px;
+	width: 30px;
+	text-align:center;
+}
+
+.tribe-events-tooltip img {
+  display:block;
+  margin: 0;
+  padding: 0;
+}
+
+.tribe-bar-disabled {
+  padding-right: 30px;
+}
+
+#tribe_events_filters_wrapper.tribe-events-filters-vertical {
+  float: left;
+}
+
+.tribe-filters-open .tribe-events-filters-vertical + #tribe-events-content,
+.tribe-filters-open .tribe-events-filters-vertical + .tribe-bar-disabled + #tribe-events-content {
+  float: right!important;
+  padding-right: 0!important;
+  padding-left: 30px!important;
+}
+
+
+/******************************************************************
+OUR VISION STYLES
+******************************************************************/
+
+time {
+	border:none;
+	margin: 0;
+	padding: 0;
+}
+
+.timeline:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 20px;
+	width: 6px;
+	background: $bbp-green;
+	left: 20%;
+	margin-left: -8px;
+}
+
+.timeline-time {
+  text-align: right;
+}
+
+.timeline > li {
+	position: relative;
+}
+
+/* The year */
+
+.timeline > li .timeline-time {
+	width: 25%;
+	padding-right: 100px;
+	position: absolute;
+	margin-top: 0;
+}
+
+.timeline div.box {
+	margin: 0 0 15px 23%;
+  transition: all .5s ease;
+}
+
+.timeline .year {
+  margin-top: 45px;
+}
+
+.timeline div.box:after {
+	right: 100%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-right-color: lighten($bbp-gray, 20%);
+	border-width: 10px;
+	top: 10px;
+	transition: all .5s ease;
+}
+
+#accomplishments {
+  div.box:after {
+    border-right-color: white;
+  }
+}
+
+.timeline span.bullet {
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	background: $bbp-green;
+	border: 3px solid white;
+	border-radius: 50%;
+	left: 20%;
+	margin: 10px 0 0 -14px;
+	transition: all .5s ease;
+	&:hover {
+  	background: darken($bbp-green, 9%);
+	}
+}
+
+/******************************************************************
+NEWS STYLES
+******************************************************************/
+
+.three-equal-columns {
+  .column {
+    float: left;
+    width: 33%;
+    padding: 0 20px;
+  }
+}
+
+.two-equal-columns {
+  .column {
+    float: left;
+    width: 48%;
+    padding: 0 20 px;
+  }
+  .column:first-of-type {
+    margin-right: 4%;
+  }
+}
+
+/******************************************************************
+FOOTER STYLES
+******************************************************************/
+
+footer {
+	> section {
+		@include clearfix;
+	}
+	nav li a {
+		width: auto;
+	}
+}
+
+.one-third {
+	width: 30%;
+	margin-right: 5%;
+	&:last-child {
+  	margin-right: 0;
+	}
+}
+
+#footer-mobile {
+	float:left;
+	padding-right: 10px;
+}
+
+#footer-newsletter {
+	float:left;
+	padding-left: 10px;
+	margin-top: 0;
+}
+
+#footer-boutique {
+  margin-top: 0;
+  float:right;
+  padding-left: 10px
+}
+
+#final-footer section {
+	margin-top: 0;
+}
+
+.contact-info, .footer-logo, .social-footer {
+	float:left;
+	padding: 7px;
+}
+
+.contact-info, .social-footer {
+	right: auto;
+	width: 30%;
+}
+
+.footer-logo {
+	width: 40%;
+	right: 30%;
+	left: auto;
+ 	position:relative;
+}
+
+.contact-info {
+	padding-top: 20px;
+	right: auto;
+	left: 40%;
+	position:relative;
+	text-align: right;
+}
+
+.social-footer {
+	padding-top: 30px;
+}
