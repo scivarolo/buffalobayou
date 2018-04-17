@@ -9,83 +9,6 @@
 	],
 "creatorBuild": "26680",
 "files": {
-	"\/.gitattributes": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/.gitattributes",
-		"oF": 0
-		},
-	"\/.gitignore": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/.gitignore",
-		"oF": 0
-		},
-	"\/.idea\/.name": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/.idea\/.name",
-		"oF": 0
-		},
-	"\/.idea\/bbp-bones.iml": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/.idea\/bbp-bones.iml",
-		"oF": 0
-		},
-	"\/.idea\/deployment.xml": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/.idea\/deployment.xml",
-		"oF": 0
-		},
-	"\/.idea\/encodings.xml": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/.idea\/encodings.xml",
-		"oF": 0
-		},
-	"\/.idea\/misc.xml": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/.idea\/misc.xml",
-		"oF": 0
-		},
-	"\/.idea\/modules.xml": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/.idea\/modules.xml",
-		"oF": 0
-		},
-	"\/.idea\/scopes\/scope_settings.xml": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/.idea\/scopes\/scope_settings.xml",
-		"oF": 0
-		},
-	"\/.idea\/vcs.xml": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/.idea\/vcs.xml",
-		"oF": 0
-		},
-	"\/.idea\/workspace.xml": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/.idea\/workspace.xml",
-		"oF": 0
-		},
 	"\/404.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1323,7 +1246,7 @@
 	},
 "projectAttributes": {
 	"creationDate": 527544790,
-	"displayValue": "bbp-bones",
+	"displayValue": "buffalobayou",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-facepalm",
 	"iconImageWasSetByUser": 0
