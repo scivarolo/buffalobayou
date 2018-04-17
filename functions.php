@@ -15,47 +15,47 @@ sidebars, comments, ect.
 SCRIPTS
 *********************/
 function custom_scripts() {
-  
+
   if( !is_admin() ) {
-  
+
     if( is_front_page() ) {
-	
+
   	  wp_register_script( 'owl-carousel', get_stylesheet_directory_uri() . '/library/js/owl.carousel.min.js', false, false, true );
     	wp_enqueue_script( 'owl-carousel' );
-    	
+
     	wp_register_script( 'owl-init', get_stylesheet_directory_uri() . '/library/js/owl.init.js', false, false, true );
-    	wp_enqueue_script( 'owl-init' ); 
-    
+    	wp_enqueue_script( 'owl-init' );
+
     }
-    
+
     if( is_page('Visit') ) {
-        
+
       wp_register_script( 'bbp-google-map', 'https://maps.googleapis.com/maps/api/js?libraries=visualization&key=AIzaSyBLQ_N7vauEL92CGlE6H5MeO_HzJd0c4n4', false, false, true );
     	wp_enqueue_script( 'bbp-google-map' );
-      
+
       wp_register_script( 'infobubble', get_stylesheet_directory_uri() . '/library/js/map/infobubble.js', false, false, true );
     	wp_enqueue_script( 'infobubble' );
-   
+
       wp_register_script( 'map-main', get_stylesheet_directory_uri() . '/library/js/map/main.js', false, false, true );
-    	wp_enqueue_script( 'map-main' );    	
-    
+    	wp_enqueue_script( 'map-main' );
+
     }
-    
+
   	wp_register_script( 'simple-weather', get_stylesheet_directory_uri() . '/library/js/jquery.simpleWeather.min.js', false, false, true );
   	wp_enqueue_script( 'simple-weather' );
-  	
+
   	wp_register_script( 'jquery-nav', get_stylesheet_directory_uri() . '/library/js/jquery.nav.js', false, false, true );
   	wp_enqueue_script( 'jquery-nav' );
 	}
 }
 
 function custom_styles() {
-  
+
   if( !is_admin() ) {
     if( is_front_page() ) {
   	wp_register_style( 'owl-carousel-css', get_stylesheet_directory_uri() . '/library/css/owl.carousel.css', false, false );
   	wp_enqueue_style( 'owl-carousel-css' );
-  	
+
   	wp_register_style( 'owl-transitions-css', get_stylesheet_directory_uri() . '/library/css/owl.transitions.css', false, false );
   	wp_enqueue_style( 'owl-transitions-css' );
   }
@@ -146,10 +146,10 @@ function bones_custom_image_sizes( $sizes ) {
 }
 
 /*
-The function above adds the ability to use the dropdown menu to select 
-the new images sizes you have just created from within the media manager 
-when you add media to your content blocks. If you add more image sizes, 
-duplicate one of the lines in the array and name it according to your 
+The function above adds the ability to use the dropdown menu to select
+the new images sizes you have just created from within the media manager
+when you add media to your content blocks. If you add more image sizes,
+duplicate one of the lines in the array and name it according to your
 new image size.
 */
 
@@ -251,10 +251,10 @@ function bones_wpsearch($form) {
 //EVENTS QUERY FILL IN
 
 function fill_in_extra_events( $query_object ) {
-			
+
 			$how_many = 3 - $query_object->post_count;
 			$not_these = wp_list_pluck( $query_object->posts, 'ID' );
-			
+
 			$get_posts_args = array(
 				'post_status'=>'publish',
 			  'post_type'=>array(Tribe__Events__Main::POSTTYPE),
@@ -268,21 +268,166 @@ function fill_in_extra_events( $query_object ) {
 			  //query events by category
 			  'posts__not_in' => $not_these
 			);
-	
+
 			$posts = get_posts( $get_posts_args );
 			$these_posts_please = wp_list_pluck( $posts, 'ID' );
 			$these_posts_please = array_merge( $not_these, $these_posts_please );
-			
+
 			$wp_query_args = array(
 				'post__in' => $these_posts_please,
 				'orderby' => 'rand'
 			);
-			
+
 			$get_posts = new WP_Query($wp_query_args);
-			
+
 			return $get_posts;
-			
+
 		}
+
+
+
+// Register Nature Blog Post Type
+// Register Custom Post Type
+
+function nature_blog_post_type() {
+
+	$labels = array(
+		'name'                  => _x( 'Blog Posts', 'Post Type General Name', 'text_domain' ),
+		'singular_name'         => _x( 'Blog Post', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'             => __( 'Blog', 'text_domain' ),
+		'name_admin_bar'        => __( 'Blog', 'text_domain' ),
+		'archives'              => __( 'Blog Archives', 'text_domain' ),
+		'attributes'            => __( 'Blog Attributes', 'text_domain' ),
+		'parent_item_colon'     => __( 'Parent Post:', 'text_domain' ),
+		'all_items'             => __( 'All Blog Posts', 'text_domain' ),
+		'add_new_item'          => __( 'Add Blog Post', 'text_domain' ),
+		'add_new'               => __( 'Add New', 'text_domain' ),
+		'new_item'              => __( 'New Post', 'text_domain' ),
+		'edit_item'             => __( 'Edit Post', 'text_domain' ),
+		'update_item'           => __( 'Update Post', 'text_domain' ),
+		'view_item'             => __( 'View Post', 'text_domain' ),
+		'view_items'            => __( 'View Posts', 'text_domain' ),
+		'search_items'          => __( 'Search Posts', 'text_domain' ),
+		'not_found'             => __( 'Not found', 'text_domain' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
+		'featured_image'        => __( 'Featured Image', 'text_domain' ),
+		'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
+		'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
+		'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
+		'insert_into_item'      => __( 'Insert into Post', 'text_domain' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this post', 'text_domain' ),
+		'items_list'            => __( 'Posts list', 'text_domain' ),
+		'items_list_navigation' => __( 'Posts list navigation', 'text_domain' ),
+		'filter_items_list'     => __( 'Filter posts list', 'text_domain' ),
+	);
+	$args = array(
+		'label'                 => __( 'Blog Post', 'text_domain' ),
+		'description'           => __( 'Blog Posts', 'text_domain' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'thumbnail', 'comments', 'trackbacks', 'revisions', 'custom-fields' ),
+		'taxonomies'            => array( 'blog-category', ' blog-tag' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'menu_icon'             => 'dashicons-format-aside',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'post',
+	);
+	register_post_type( 'blog', $args );
+
+}
+add_action( 'init', 'nature_blog_post_type', 0 );
+
+// Register Blog Category Taxonomy
+// Register Custom Taxonomy
+
+function blog_category() {
+
+	$labels = array(
+		'name'                       => _x( 'Blog Categories', 'Taxonomy General Name', 'text_domain' ),
+		'singular_name'              => _x( 'Blog Category', 'Taxonomy Singular Name', 'text_domain' ),
+		'menu_name'                  => __( 'Blog Category', 'text_domain' ),
+		'all_items'                  => __( 'All Blog Categories', 'text_domain' ),
+		'parent_item'                => __( 'Parent Blog Category', 'text_domain' ),
+		'parent_item_colon'          => __( 'Parent Blog Category:', 'text_domain' ),
+		'new_item_name'              => __( 'New Blog Category', 'text_domain' ),
+		'add_new_item'               => __( 'Add New Blog Category', 'text_domain' ),
+		'edit_item'                  => __( 'Edit Blog Category', 'text_domain' ),
+		'update_item'                => __( 'Update Blog Category', 'text_domain' ),
+		'view_item'                  => __( 'View Blog Category', 'text_domain' ),
+		'separate_items_with_commas' => __( 'Separate blog categories with commas', 'text_domain' ),
+		'add_or_remove_items'        => __( 'Add or remove blog categories', 'text_domain' ),
+		'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
+		'popular_items'              => __( 'Popular Blog Categories', 'text_domain' ),
+		'search_items'               => __( 'Search Blog Categories', 'text_domain' ),
+		'not_found'                  => __( 'Not Found', 'text_domain' ),
+		'no_terms'                   => __( 'No blog categories', 'text_domain' ),
+		'items_list'                 => __( 'Blog categories list', 'text_domain' ),
+		'items_list_navigation'      => __( 'Blog Categories list navigation', 'text_domain' ),
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+	);
+	register_taxonomy( 'blog-category', array( 'blog' ), $args );
+
+}
+add_action( 'init', 'blog_category', 0 );
+
+
+
+// Register Blog Tags Taxonomy
+// Register Custom Taxonomy
+function blog_tag() {
+
+	$labels = array(
+		'name'                       => _x( 'Blog Tags', 'Taxonomy General Name', 'text_domain' ),
+		'singular_name'              => _x( 'Blog Tag', 'Taxonomy Singular Name', 'text_domain' ),
+		'menu_name'                  => __( 'Blog Tags', 'text_domain' ),
+		'all_items'                  => __( 'All Blog Tags', 'text_domain' ),
+		'parent_item'                => __( 'Parent Blog Tag', 'text_domain' ),
+		'parent_item_colon'          => __( 'Parent Blog Tag:', 'text_domain' ),
+		'new_item_name'              => __( 'New Blog Tag', 'text_domain' ),
+		'add_new_item'               => __( 'Add New Blog Tag', 'text_domain' ),
+		'edit_item'                  => __( 'Edit Blog Tag', 'text_domain' ),
+		'update_item'                => __( 'Update Blog Tag', 'text_domain' ),
+		'view_item'                  => __( 'View Blog Tag', 'text_domain' ),
+		'separate_items_with_commas' => __( 'Separate Blog Tags with commas', 'text_domain' ),
+		'add_or_remove_items'        => __( 'Add or remove blog tags', 'text_domain' ),
+		'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
+		'popular_items'              => __( 'Popular Blog Tags', 'text_domain' ),
+		'search_items'               => __( 'Search Blog Tags', 'text_domain' ),
+		'not_found'                  => __( 'Not Found', 'text_domain' ),
+		'no_terms'                   => __( 'No Blog Tags', 'text_domain' ),
+		'items_list'                 => __( 'Blog Tags list', 'text_domain' ),
+		'items_list_navigation'      => __( 'Blog Tags list navigation', 'text_domain' ),
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => false,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+	);
+	register_taxonomy( 'blog-tag', array( 'blog' ), $args );
+
+}
+add_action( 'init', 'blog_tag', 0 );
+
 
 
 
@@ -544,7 +689,7 @@ function get_the_slug( $id=null ) {
 			return ''; //No global $post var available.
 		$id = $post->ID;
 	endif;
-	
+
 	$slug = basename( get_permalink($id) );
 	return $slug;
 }
