@@ -429,61 +429,6 @@ function blog_tag() {
 add_action( 'init', 'blog_tag', 0 );
 
 
-
-
-
-
-
-
-// Register News Custom Post Type
-/*
-function news_post_type() {
-
-	$labels = array(
-		'name'                => 'News Articles',
-		'singular_name'       => 'News Article',
-		'menu_name'           => 'News',
-		'parent_item_colon'   => 'Parent Item:',
-		'all_items'           => 'All News',
-		'view_item'           => 'View Item',
-		'add_new_item'        => 'Add New Item',
-		'add_new'             => 'Add New',
-		'edit_item'           => 'Edit Item',
-		'update_item'         => 'Update Item',
-		'search_items'        => 'Search News',
-		'not_found'           => 'News not found',
-		'not_found_in_trash'  => 'News not found in Trash',
-	);
-	$args = array(
-		'label'               => 'news',
-		'description'         => 'Custom Post Type for News',
-		'labels'              => $labels,
-		'supports'            => array( 'title', 'editor', 'thumbnail', ),
-		'taxonomies'          => array( 'category', 'post_tag' ),
-		'hierarchical'        => false,
-		'public'              => true,
-		'show_ui'             => true,
-		'show_in_menu'        => true,
-		'show_in_nav_menus'   => true,
-		'show_in_admin_bar'   => true,
-		'menu_position'       => 5,
-		'menu_icon'           => '',
-		'can_export'          => true,
-		'has_archive'         => true,
-		'exclude_from_search' => false,
-		'publicly_queryable'  => true,
-		'capability_type'     => 'post',
-	);
-	register_post_type( 'news', $args );
-
-}
-*/
-
-// Hook into the 'init' action
-//add_action( 'init', 'news_post_type', 0 );
-
-
-
 // Register Destinations Custom Post Type
 function destinations_custom_post_type() {
 
