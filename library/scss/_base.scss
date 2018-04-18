@@ -1353,7 +1353,7 @@ article.post {
 .list-of-items {
 
   li {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     line-height:1.25;
     a {
       font-family: $sans-serif;
@@ -1366,6 +1366,10 @@ article.post {
       line-height:1.5;
     }
   }
+}
+
+.widget ul li {
+  margin: 0 0 5px 0;
 }
 
 .sidebar-column#news-sidebar {
