@@ -184,6 +184,21 @@
 		"oO": 0,
 		"oS": 1
 		},
+	"\/acf-json\/group_5ad7c4d6cf1b4.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/acf-json\/group_5ad7c4d6cf1b4-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/archive-blog.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/archive-blog.php",
+		"oF": 0
+		},
 	"\/archive-custom_type.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1026,6 +1041,13 @@
 		"oAP": "\/search.php",
 		"oF": 0
 		},
+	"\/section-blog-sidebar.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/section-blog-sidebar.php",
+		"oF": 0
+		},
 	"\/section-callout.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1075,6 +1097,13 @@
 		"oAP": "\/sidebar.php",
 		"oF": 0
 		},
+	"\/single-blog.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/single-blog.php",
+		"oF": 0
+		},
 	"\/single-custom_type.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1118,6 +1147,13 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/taxonomy-custom_cat.php",
+		"oF": 0
+		},
+	"\/taxonomy.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/taxonomy.php",
 		"oF": 0
 		},
 	"\/template-eventcategory.php": {
