@@ -1470,7 +1470,8 @@ article.post {
 .wp-caption {
 	max-width: 100%;
 	background: #eee;
-	padding: 5px;
+	padding: 3px;
+  margin-bottom: 1.2em;
 
 /* images inside wp-caption */
 	img {
@@ -1480,7 +1481,7 @@ article.post {
 	}
 	p.wp-caption-text {
 		font-size: 0.85em;
-		margin: 4px 0 7px;
+		margin: 4px 0 9px;
 		text-align: center;
 	}
 } /* end .wp-caption */

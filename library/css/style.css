@@ -2269,7 +2269,8 @@ article.post {
 .wp-caption {
   max-width: 100%;
   background: #eee;
-  padding: 5px;
+  padding: 3px;
+  margin-bottom: 1.2em;
   /* images inside wp-caption */ }
   .wp-caption img {
     max-width: 100%;
@@ -2277,7 +2278,7 @@ article.post {
     width: 100%; }
   .wp-caption p.wp-caption-text {
     font-size: 0.85em;
-    margin: 4px 0 7px;
+    margin: 4px 0 9px;
     text-align: center; }
 
 /* end .wp-caption */
