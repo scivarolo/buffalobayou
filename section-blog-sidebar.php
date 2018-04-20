@@ -1,7 +1,7 @@
 <div id="news-sidebar" class="sidebar-column last clearfix" role="complementary">
 
 	<div id="sidebar-text">
-	  <?php the_field('sidebar_note', 'option'); ?>
+	  <?php the_field('sidebar_text', 'option'); ?>
 	</div>
 
 	<?php if ( is_active_sidebar( 'sidebar2' ) ) : ?>
