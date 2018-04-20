@@ -1349,6 +1349,14 @@ article.post {
 	}
 }
 
+.article-footer {
+  border-top: 1px solid $bbp-gray;
+  padding-top: 20px;
+  margin-top: 20px;
+  .tags {
+    margin: 0;
+  }
+}
 
 .list-of-items {
 

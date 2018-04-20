@@ -2180,6 +2180,13 @@ article.post {
     article.post .event-date {
       margin-bottom: 0; } }
 
+.article-footer {
+  border-top: 1px solid #b7c9bb;
+  padding-top: 20px;
+  margin-top: 20px; }
+  .article-footer .tags {
+    margin: 0; }
+
 .list-of-items li {
   margin-bottom: 10px;
   line-height: 1.25; }

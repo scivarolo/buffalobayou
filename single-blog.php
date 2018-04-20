@@ -40,7 +40,9 @@
 								</section>
 
 								<footer class="article-footer">
-									<?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
+
+                  <?php the_terms($post->ID, 'blog-tag', '<p class="tags">tags: ', ', ', '</p>'); ?>
+                  <?php the_terms($post->ID, 'blog-category', '<p class="tags">categories: ', ', ', '</p>'); ?>
 
 								</footer>
 
