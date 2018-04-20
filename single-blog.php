@@ -5,11 +5,13 @@
 <?php if( $background_image ) : ?>
 
 <section data-type="parallax" data-speed=".75" style="background-image: url(<?php echo $background_image['sizes']['large']; ?>);">
-  <?php if( get_field('blog_header_callout', 'option') ) : ?>
+  <?php if( get_field('blog_heading', 'option') ) : ?>
     <div class="navy">
       <div class="wrap text-center">
         <h1><?php the_field('blog_heading', 'option'); ?></h1>
+        <?php if(get_field('blog_header_callout', 'option') ) : ?>
         <p id="mission" class="main-callout"><?php the_field('blog_header_callout', 'option'); ?></p>
+        <?php endif; ?>
       </div>
     </div>
   <?php else : ?><div><br><br><br><br><br><br></div><?php endif; ?>
