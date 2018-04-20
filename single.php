@@ -1,5 +1,22 @@
 <?php get_header(); ?>
 
+<?php $background_image = get_field('background_image', 'option'); ?>
+
+<?php if( $background_image ) : ?>
+
+<section data-type="parallax" data-speed=".75" style="background-image: url(<?php echo $background_image['sizes']['large']; ?>);">
+	<?php if( get_field('callout_text', 'option') ) : ?>
+	  <div class="navy">
+		  <div class="wrap text-center">
+		    <h1><?php echo apply_filters( 'the_title', get_the_title( get_option('page_for_posts') ) ); ?></h1>
+				<p id="mission" class="main-callout"><?php the_field('callout_text', 'option'); ?></p>
+  		</div>
+  	</div>
+  <?php else : ?><div><br><br><br><br><br><br></div><?php endif; ?>
+</section>
+
+<?php endif; ?>
+
 			<div id="content">
 
 				<section class="wrap clearfix">
@@ -50,7 +67,7 @@
 					</div>
 
 					<?php get_template_part('section', 'news-sidebar'); ?>
-					
+
 				</section>
 
 			</div>
