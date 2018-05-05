@@ -205,34 +205,36 @@ var webMap = function () {
       featureInfoBubble.setContent(content);
       return featureInfoBubble;
     };
-    
+
     var getInfoBubbleContent = function (feature, featureId) {
-        
+
         var styledContent = "";
         var mainDiv = "<div class='heading-container'>";
         var url = feature.getProperty('Url for Web');
-
+        var thumbnailUrl = feature.getProperty('Thumbnail').replace('http://', 'https://');
+        console.log(thumbnailUrl);
         // Put thumbnail image into content, using the placeholder thumbnail if the feature doesn't have its own thumbnail URL
-        
-        
-        
+
+
+
         styledContent += '<div>';
-        
+
         if(feature.getProperty('Thumbnail')) {
-          styledContent += '<img class="infobubble-thumbnail" src="' + feature.getProperty('Thumbnail') + '" alt="" onerror="webMap.replaceThumbnail(this);" width="50px">';
+
+          styledContent += '<img class="infobubble-thumbnail" src="' + thumbnailUrl + '" alt="" onerror="webMap.replaceThumbnail(this);" width="50px">';
         }
-        
+
         styledContent += '<h3 class="infobubble-feature-name">' + feature.getProperty('Name') + '</h3>';
-        
+
         if(feature.getProperty('Url for Web') && feature.getProperty('Has Url for Web') == 1) {
           styledContent += '<a class="infobubble-arrow" title="to ' + feature.getProperty('Name') + '" href="' + url + '"><i class="icon-arrow-right"></i></a>';
         }
-        
+
         styledContent += "</div></div>";
-        
+
         return styledContent;
       }
-        
+
 
 	var doStyling = function(feature, hiddenLayers)
     {
@@ -300,18 +302,18 @@ var webMap = function () {
 
             // Adds geolocation functionality, including a custom control to center the user on their position
             //implementGeolocation();
-            
+
             map.data.loadGeoJson('https://script.google.com/macros/s/AKfycbzG3KL_qmQQfYeDpC-DOb8OMKfbZYWNZ0INiK3UmBg0TXk8J5Vb/exec?key=9DFDEB02-C10B-11E4-9F48-041CF186852F&type=geo');
             map.data.setStyle(doStyling);
-            
+
             google.maps.event.addListener(map, 'zoom_changed', function()
             {
                 map.data.setStyle(function(feature){
                 	return doStyling(feature, webMap.hiddenLayers);
                 });
             });
-            
-            
+
+
             // When the user clicks, set 'isColorful', changing the color of the letters.
             map.data.addListener('click', function(event) {
             	var data = event.feature;
@@ -332,7 +334,7 @@ var webMap = function () {
             webMap.getMap().setZoom(16);
             var bubble = prepareNewInfoBubble(JSON.parse(rawContent), newMapCenter);
             bubble.open();
-            
+
         },
 /*
 		turnOnLayer: function (layerKey){
