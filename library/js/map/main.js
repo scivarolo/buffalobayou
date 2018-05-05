@@ -245,7 +245,7 @@ var webMap = function () {
 		var strokeColor = '#f16021';
 
 		if (zoomLevel >= 16){
-			icon = feature.getProperty('Feature Icon');
+			icon = feature.getProperty('Feature Icon').replace('http://', 'https://');
 			if (zoomLevel >=17){
 				if (zoomLevel >=18){
 					if (zoomLevel >=22){
@@ -258,7 +258,7 @@ var webMap = function () {
 		}
 		else if (feature.getProperty('Small Icon'))
 	    {
-	      icon = feature.getProperty('Small Icon');
+	      icon = feature.getProperty('Small Icon').replace('http://', 'https://');
 	      scaledSize.width = 22;
 	      scaledSize.height = 22;
 	    }
