@@ -10,7 +10,7 @@
 var webMap = function () {
     // TODO Move into the config file
     var maxZoomLevel = 4,
-        initalZoomLevel = 14,
+        initalZoomLevel = 15,
         defaultMapCenter = new google.maps.LatLng(29.761732,-95.388371);
     var mapStyles = [
       {
@@ -239,12 +239,12 @@ var webMap = function () {
 	var doStyling = function(feature, hiddenLayers)
     {
         var icon = '';
-        var scaledSize = { width: 30, height: 30 };
+        var scaledSize = { width: 25, height: 25 };
         var zoomLevel = map.getZoom();
         var strokeWeight = 2;
     		var strokeColor = '#f16021';
 
-		if (zoomLevel >= 16){
+		if (zoomLevel >= 15){
 			icon = feature.getProperty('Feature Icon').replace('http://', 'https://');
 			if (zoomLevel >=17 ) {
 				if (zoomLevel >= 18 ){
