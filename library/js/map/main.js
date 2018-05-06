@@ -239,16 +239,16 @@ var webMap = function () {
 	var doStyling = function(feature, hiddenLayers)
     {
         var icon = '';
-        var scaledSize = { width: 30, height:30, widthUnit: 'px', heightUnit: 'px'};
+        var scaledSize = { width: 30, height: 30 };
         var zoomLevel = map.getZoom();
         var strokeWeight = 2;
-		var strokeColor = '#f16021';
+    		var strokeColor = '#f16021';
 
 		if (zoomLevel >= 16){
 			icon = feature.getProperty('Feature Icon').replace('http://', 'https://');
-			if (zoomLevel >=17){
-				if (zoomLevel >=18){
-					if (zoomLevel >=22){
+			if (zoomLevel >=17 ) {
+				if (zoomLevel >= 18 ){
+					if (zoomLevel >= 22 ){
 						strokeWeight = 10;
 					}
 				else strokeWeight = 8;
@@ -256,29 +256,42 @@ var webMap = function () {
 				else strokeWeight = 5;
 			}
 		}
-		else if (feature.getProperty('Small Icon'))
-	    {
-	      icon = feature.getProperty('Small Icon').replace('http://', 'https://');
-	      scaledSize.width = 22;
-	      scaledSize.height = 22;
-	    }
+		else if (feature.getProperty('Small Icon')) {
+      icon = feature.getProperty('Small Icon').replace('http://', 'https://');
+      scaledSize.width = 22;
+      scaledSize.height = 22;
+    }
 
-	    if (hiddenLayers){
-	    	if (hiddenLayers.indexOf(feature.getProperty('Group')) > -1){
-	    		return {visible: false};
-	    	}
-	    }
+    if (hiddenLayers){
+    	if (hiddenLayers.indexOf(feature.getProperty('Group')) > -1){
+    		return {visible: false};
+    	}
+    }
 
-		return /** @type {google.maps.Data.StyleOptions} */({
-		  icon: {
-			url: icon,
-			scaledSize: scaledSize,
-			clickable: true,
-			anchor: new google.maps.Point(scaledSize.width/2,scaledSize.height/2)
-		  },
-		  strokeWeight: strokeWeight,
-		  strokeColor: strokeColor
-        });
+  		return /** @type {google.maps.Data.StyleOptions} */({
+  		  // icon: {
+    		// 	url: icon,
+    		// 	scaledSize: scaledSize,
+        //   size: scaledSize,
+    		// 	anchor: new google.maps.Point(scaledSize.width/2,scaledSize.height/2)
+  		  // },
+
+        icon: {
+          url: icon,
+          scaledSize: new google.maps.Size(scaledSize.width, scaledSize.height),
+          size: new google.maps.Size(scaledSize.width, scaledSize.height),
+          anchor: new google.maps.Point(scaledSize.width/2, 3)
+        },
+
+        // Below displays the icons at 2x reg size
+        //icon: icon,
+
+        clickable: true,
+  		  strokeWeight: strokeWeight,
+  		  strokeColor: strokeColor,
+        fillOpacity: 1,
+        visible: true
+      });
     };
 
     //-------------------------Initializing the Map--------------------------//
