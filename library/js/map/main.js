@@ -269,23 +269,12 @@ var webMap = function () {
     }
 
   		return /** @type {google.maps.Data.StyleOptions} */({
-  		  // icon: {
-    		// 	url: icon,
-    		// 	scaledSize: scaledSize,
-        //   size: scaledSize,
-    		// 	anchor: new google.maps.Point(scaledSize.width/2,scaledSize.height/2)
-  		  // },
-
         icon: {
           url: icon,
           scaledSize: new google.maps.Size(scaledSize.width, scaledSize.height),
           size: new google.maps.Size(scaledSize.width, scaledSize.height),
           anchor: new google.maps.Point(scaledSize.width/2, 3)
         },
-
-        // Below displays the icons at 2x reg size
-        //icon: icon,
-
         clickable: true,
   		  strokeWeight: strokeWeight,
   		  strokeColor: strokeColor,
