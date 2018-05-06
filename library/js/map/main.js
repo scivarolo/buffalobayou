@@ -10,7 +10,7 @@
 var webMap = function () {
     // TODO Move into the config file
     var maxZoomLevel = 4,
-        initalZoomLevel = 15,
+        initalZoomLevel = 14,
         defaultMapCenter = new google.maps.LatLng(29.761732,-95.388371);
     var mapStyles = [
       {
@@ -239,23 +239,23 @@ var webMap = function () {
 	var doStyling = function(feature, hiddenLayers)
     {
         var icon = '';
-        var scaledSize = { width: 25, height: 25 };
+        var scaledSize = { width: 30, height: 30 };
         var zoomLevel = map.getZoom();
         var strokeWeight = 2;
     		var strokeColor = '#f16021';
 
-		if (zoomLevel >= 15){
+		if (zoomLevel >= 16){
 			icon = feature.getProperty('Feature Icon').replace('http://', 'https://');
-      if (zoomLevel >=17 ) {
-      	if (zoomLevel >= 18 ) {
-      		if (zoomLevel >= 22 ) {
+			if (zoomLevel >=17 ) {
+				if (zoomLevel >= 18 ){
+					if (zoomLevel >= 22 ){
 						strokeWeight = 10;
 					}
 				else strokeWeight = 8;
 				}
 				else strokeWeight = 5;
 			}
-    }
+		}
 		else if (feature.getProperty('Small Icon')) {
       icon = feature.getProperty('Small Icon').replace('http://', 'https://');
       scaledSize.width = 22;
@@ -268,20 +268,31 @@ var webMap = function () {
     	}
     }
 
-		return /** @type {google.maps.Data.StyleOptions} */({
-      icon: {
-        url: icon,
-        scaledSize: new google.maps.Size(scaledSize.width, scaledSize.height),
-        size: new google.maps.Size(scaledSize.width, scaledSize.height),
-        anchor: new google.maps.Point(scaledSize.width/2, 3)
-      },
-      clickable: true,
-		  strokeWeight: strokeWeight,
-		  strokeColor: strokeColor,
-      fillOpacity: 1,
-      visible: true
-    });
-  };
+  		return /** @type {google.maps.Data.StyleOptions} */({
+  		  // icon: {
+    		// 	url: icon,
+    		// 	scaledSize: scaledSize,
+        //   size: scaledSize,
+    		// 	anchor: new google.maps.Point(scaledSize.width/2,scaledSize.height/2)
+  		  // },
+
+        icon: {
+          url: icon,
+          scaledSize: new google.maps.Size(scaledSize.width, scaledSize.height),
+          size: new google.maps.Size(scaledSize.width, scaledSize.height),
+          anchor: new google.maps.Point(scaledSize.width/2, 3)
+        },
+
+        // Below displays the icons at 2x reg size
+        //icon: icon,
+
+        clickable: true,
+  		  strokeWeight: strokeWeight,
+  		  strokeColor: strokeColor,
+        fillOpacity: 1,
+        visible: true
+      });
+    };
 
     //-------------------------Initializing the Map--------------------------//
     return {
