@@ -1613,7 +1613,9 @@ HOME PAGE STYLES
     .home-event-info h3 a:hover {
       color: #e8f2d3; }
   .home-event-info p {
-    margin-top: 5px; }
+    margin-top: 5px;
+    font-size: 14px;
+    line-height: 1.6; }
   .home-event-info .text-center {
     position: absolute;
     bottom: 0;
