@@ -48,34 +48,34 @@
 
 			<header class="header" role="banner">
 				<nav class="mobile" role="navigation">
-					<?php bones_main_nav(); ?>
+					<?php bones_mobile_nav(); ?>
 					<a class="mobile-toggle">Menu</a>
 				</nav>
 				<div id="weather"></div>
 				<div id="social-icons">
 					<a class="button green" href="<?php echo esc_url( get_permalink( get_page_by_title( 'Donate' ) ) ); ?>">donate</a>
 					<?php $facebook = get_field('facebook', 'option');
-    			  $twitter = get_field('twitter', 'option'); 
+    			  $twitter = get_field('twitter', 'option');
     			  $instagram = get_field('instagram', 'option');
     			  $flickr = get_field('flickr', 'option');?>
-    			  
+
     			  <?php if ( $facebook ) : ?>
-    			  
+
       				<a href="<?php echo $facebook; ?>" target="_blank"><i class="icon-facebook"></i></a>
-    				
+
     				<?php endif; if ( $twitter ) : ?>
-    				
+
       				<a href="<?php echo $twitter; ?>" target="_blank"><i class="icon-twitter"></i></a>
-    				
+
     				<?php endif; if ( $instagram ) : ?>
-    				
+
       				<a href="<?php echo $instagram; ?>" target="_blank"><i class="icon-instagram"></i></a>
-    				
+
     				<?php endif; if ( $flickr ) : ?>
-    				
+
       				<a href="<?php echo $flickr; ?>" target="_blank"><i class="icon-flickr"></i></a>
-    				
-    				<?php endif; ?>	
+
+    				<?php endif; ?>
     				  <a href="#footer-newsletter"><i class="icon-mail"></i></a>
 				</div>
 				<div id="inner-header" class="clearfix">
@@ -89,6 +89,6 @@
 				</div>
 				<nav class="main-nav" role="navigation">
   				<!-- <a class="logo-btn" href="<?php echo home_url(); ?>">Home</a> -->
-					<?php bones_main_nav(); ?>		
+					<?php bones_main_nav(); ?>
 				</nav>
 			</header>

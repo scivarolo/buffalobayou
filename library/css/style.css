@@ -1392,11 +1392,16 @@ nav > ul {
 /* MOBILE NAV */
 @media only screen and (max-width: 767px) {
   header nav > ul {
+    height: auto;
     display: none;
-    height: auto; }
+    background-color: #93bf3a; }
+    header nav > ul li {
+      width: 50%;
+      float: left; }
     header nav > ul li a {
-      border-bottom: 1px solid #b3d471;
-      background-color: #93bf3a; }
+      border-bottom: 1px solid #b3d471; }
+    header nav > ul li:nth-of-type(odd) {
+      border-right: 1px solid #b3d471; }
   ul.sub-menu {
     display: none; }
   a.mobile-toggle {
@@ -1406,6 +1411,8 @@ nav > ul {
     padding: 10px;
     background-color: #93bf3a;
     color: white;
+    border-top: 1px solid #b3d471;
+    margin-top: -1px;
     cursor: pointer; } }
 
 nav.main-nav, nav.mobile {

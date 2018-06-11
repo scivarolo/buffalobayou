@@ -18,54 +18,54 @@ if (!window.getComputedStyle) {
 
 // as the page loads, call these scripts
 jQuery(document).ready(function($) {
-	
+
   $('body').bind('touchstart', function() {});
 
 	/* getting viewport width */
 	var responsive_viewport = $(window).width();
-	
+
 	/* if is below 481px */
 	if (responsive_viewport < 481) {
-	
+
 	} /* end smallest screen */
-	
+
 	/* if is larger than 481px */
 	if (responsive_viewport > 481) {
-	
-	
+
+
 	} /* end larger than 481px */
-	
+
 	/* if is above or equal to 768px */
 	if (responsive_viewport >= 768) {
-	
+
 		/* load gravatars */
 		$('.comment img[data-gravatar]').each(function(){
 			$(this).attr('src',$(this).attr('data-gravatar'));
 		});
-		
+
 		// controls the one-page nav jquery
-		
+
 		$('.sub-nav').onePageNav({scrollThreshold: 0.25});
-		
+
 	}
-	
+
 	/* off the bat large screen actions */
 	if (responsive_viewport > 1030) {
-	
+
 	}
-	
+
 	//Responsive Collapsing Nav
-	
+
 	$(function() {
 		var mobileToggle = $('.mobile-toggle');
 		var menu = $('nav.mobile > ul');
 		var menuHeight = menu.height();
-		
+
 		$(mobileToggle).on('click', function(e) {
 			e.preventDefault();
 			menu.slideToggle();
 		});
-			
+
 		$(window).resize(function() {
 			var w = $(window).width();
 			if(w > 768 && menu.is(':hidden')) {
@@ -73,37 +73,37 @@ jQuery(document).ready(function($) {
 			}
 		});
 	});
-	
+
 	//Simple Weather
-		
+
 		$.simpleWeather({
-	    
+
 	    woeid: '2424766',
 	    unit: 'f',
 	    success: function(weather) {
 	      html = '<i class="icon-'+weather.code+'"></i><span>' + weather.currently + ' and ' + weather.temp + '&deg;' + weather.units.temp + ' currently in ' + weather.city + ', ' + weather.region + '<span class="attribution">from <a href="' + weather.link + '">Yahoo! Weather</a></span>' + '</span>';
-	  
+
 	      $("#weather").html(html);
 	    },
 	    error: function(error) {
 	      $("#weather").html('<p>'+error+'</p>');
 	    }
 	  });
-	
+
 	$("#weather").hover(function(){
   	$(".attribution").delay(250).fadeIn(); },
-  	function() { $(".attribution").fadeOut();  
+  	function() { $(".attribution").fadeOut();
 	});
 
-	
+
 	// adds button styling to tribe_the_prev_event_link and tribe_the_next_event_link since those output the url with the anchor tag.
-	
+
 	$('.single .tribe-events-nav-previous a').addClass('gray clear button left');
 	$('.single .tribe-events-nav-next a').addClass('gray clear button right');
-	
-	
+
+
 	//back to top button
-	
+
 	var offset = 220;
 	var duration = 500;
 	$(window).scroll(function() {
@@ -112,21 +112,21 @@ jQuery(document).ready(function($) {
     	} else {
       	$('.back-to-top').fadeOut(duration);
   	}
-  	
+
 	});
 	$('.back-to-top').click(function(event) {
   	event.preventDefault();
   	jQuery('html, body').animate({scrollTop: 0}, duration);
   	return false;
 	});
-	
-	
+
+
 	// add all your scripts here
- 
+
 }); /* end of as page load scripts */
 
 //Scroll to anchor on new page load
-  
+
 
 var mainNav = jQuery('nav.main-nav'),
 		mainNavOffset = jQuery('nav.main-nav').offset().top,
@@ -139,7 +139,7 @@ if( jQuery('nav.sub-nav').length ) {
 
 jQuery(window).scroll(function() {
 		mainNav.toggleClass('sticky', jQuery(window).scrollTop() > mainNavOffset);
-		
+
 		if( jQuery('nav.sub-nav').length ) {
 			subNav.toggleClass('sticky', jQuery(window).scrollTop() > (subNavOffset - 52));
 

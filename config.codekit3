@@ -627,7 +627,7 @@
 	"\/library\/js\/jquery.nav.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "\/library\/js\/jquery.nav-min.js",
 		"oF": 0,
@@ -637,7 +637,7 @@
 	"\/library\/js\/jquery.simpleWeather-2.6.min.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "\/library\/js\/jquery.simpleWeather-2.6.min-min.js",
 		"oF": 0,
@@ -647,7 +647,7 @@
 	"\/library\/js\/jquery.simpleWeather.min.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "\/library\/js\/jquery.simpleWeather.min-min.js",
 		"oF": 0,
@@ -657,7 +657,7 @@
 	"\/library\/js\/libs\/modernizr.custom.min.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "\/library\/js\/libs\/modernizr.custom.min-min.js",
 		"oF": 0,
@@ -667,7 +667,7 @@
 	"\/library\/js\/map\/infobubble.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "\/library\/js\/map\/infobubble-min.js",
 		"oF": 0,
@@ -677,7 +677,7 @@
 	"\/library\/js\/map\/main.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "\/library\/js\/map\/main-min.js",
 		"oF": 0,
@@ -687,7 +687,7 @@
 	"\/library\/js\/min\/jquery.localScroll.min-ck.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "\/library\/js\/min\/jquery.localScroll.min-ck-min.js",
 		"oF": 0,
@@ -697,7 +697,7 @@
 	"\/library\/js\/min\/owl.init-ck.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "\/library\/js\/min\/owl.init-ck-min.js",
 		"oF": 0,
@@ -707,7 +707,7 @@
 	"\/library\/js\/min\/scripts-ck.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "\/library\/js\/min\/scripts-ck-min.js",
 		"oF": 0,
@@ -717,7 +717,7 @@
 	"\/library\/js\/owl.carousel.min.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "\/library\/js\/owl.carousel.min-min.js",
 		"oF": 0,
@@ -727,7 +727,7 @@
 	"\/library\/js\/owl.init.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "\/library\/js\/owl.init-min.js",
 		"oF": 0,
@@ -747,7 +747,7 @@
 	"\/library\/js\/scripts.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "\/library\/js\/scripts-min.js",
 		"oF": 0,
@@ -3099,14 +3099,14 @@
 		"quality": 100
 		},
 	"languageDefaultsJS": {
-		"autoOutputAction": 0,
+		"autoOutputAction": 1,
 		"autoOutputPathFilenamePattern": "*-min.js",
 		"autoOutputPathRelativePath": "\/min",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
 		"createSourceMap": 0,
-		"minifyOutput": 1,
+		"minifyOutput": 0,
 		"syntaxCheckerStyle": 1,
 		"transpilerStyle": 0
 		},

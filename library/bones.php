@@ -210,6 +210,7 @@ function bones_theme_support() {
 	// registering wp3+ menus
 	register_nav_menus(
 		array(
+      'mobile-nav' => __('Mobile Menu', 'bonestheme'), //mobile menu
 			'main-nav' => __( 'The Main Menu', 'bonestheme' ),   // main nav in header
 			'footer-links' => __( 'Footer Links', 'bonestheme' ) // secondary nav in footer
 		)
@@ -230,6 +231,23 @@ function bones_main_nav() {
 		'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
 		'menu_class' => 'nav top-nav clearfix',         // adding custom nav class
 		'theme_location' => 'main-nav',                 // where it's located in the theme
+		'before' => '',                                 // before the menu
+		'after' => '',                                  // after the menu
+		'link_before' => '',                            // before each link
+		'link_after' => '',                             // after each link
+		'depth' => 0,                                   // limit the depth of the nav
+		'fallback_cb' => 'bones_main_nav_fallback'      // fallback function
+	));
+} /* end bones main nav */
+
+function bones_mobile_nav() {
+	// display the wp3 menu if available
+	wp_nav_menu(array(
+		'container' => false,                           // remove nav container
+		'container_class' => 'menu clearfix',           // class of container (should you choose to use it)
+		'menu' => __( 'Mobile Menu', 'bonestheme' ),  // nav name
+		'menu_class' => 'nav top-nav clearfix',         // adding custom nav class
+		'theme_location' => 'mobile-nav',                 // where it's located in the theme
 		'before' => '',                                 // before the menu
 		'after' => '',                                  // after the menu
 		'link_before' => '',                            // before each link
@@ -285,7 +303,7 @@ function bones_related_posts() {
 	global $post;
 	$tags = wp_get_post_tags( $post->ID );
 	if($tags) {
-		foreach( $tags as $tag ) { 
+		foreach( $tags as $tag ) {
 			$tag_arr .= $tag->slug . ',';
 		}
 		$args = array(
@@ -316,9 +334,9 @@ function bones_page_navi() {
 	$bignum = 999999999;
 	if ( $wp_query->max_num_pages <= 1 )
 		return;
-	
+
 	echo '<nav class="pagination">';
-	
+
 		echo paginate_links( array(
 			'base' 			=> str_replace( $bignum, '%#%', esc_url( get_pagenum_link($bignum) ) ),
 			'format' 		=> '',
@@ -330,7 +348,7 @@ function bones_page_navi() {
 			'end_size'		=> 3,
 			'mid_size'		=> 3
 		) );
-	
+
 	echo '</nav>';
 } /* end page navi */
 
