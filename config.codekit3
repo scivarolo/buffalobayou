@@ -270,6 +270,13 @@
 		"oAP": "\/front-page.php",
 		"oF": 0
 		},
+	"\/functions.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/functions.php",
+		"oF": 0
+		},
 	"\/header.php": {
 		"cB": 0,
 		"ft": 8192,
