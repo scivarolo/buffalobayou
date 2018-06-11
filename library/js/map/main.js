@@ -10,7 +10,7 @@
 var webMap = function () {
     // TODO Move into the config file
     var maxZoomLevel = 4,
-        initalZoomLevel = 14,
+        initalZoomLevel = 15,
         defaultMapCenter = new google.maps.LatLng(29.761732,-95.388371);
     var mapStyles = [
       {
@@ -205,48 +205,50 @@ var webMap = function () {
       featureInfoBubble.setContent(content);
       return featureInfoBubble;
     };
-    
+
     var getInfoBubbleContent = function (feature, featureId) {
-        
+
         var styledContent = "";
         var mainDiv = "<div class='heading-container'>";
         var url = feature.getProperty('Url for Web');
-
+        var thumbnailUrl = feature.getProperty('Thumbnail').replace('http://', 'https://');
+        console.log(thumbnailUrl);
         // Put thumbnail image into content, using the placeholder thumbnail if the feature doesn't have its own thumbnail URL
-        
-        
-        
+
+
+
         styledContent += '<div>';
-        
+
         if(feature.getProperty('Thumbnail')) {
-          styledContent += '<img class="infobubble-thumbnail" src="' + feature.getProperty('Thumbnail') + '" alt="" onerror="webMap.replaceThumbnail(this);" width="50px">';
+
+          styledContent += '<img class="infobubble-thumbnail" src="' + thumbnailUrl + '" alt="" onerror="webMap.replaceThumbnail(this);" width="50px">';
         }
-        
+
         styledContent += '<h3 class="infobubble-feature-name">' + feature.getProperty('Name') + '</h3>';
-        
+
         if(feature.getProperty('Url for Web') && feature.getProperty('Has Url for Web') == 1) {
           styledContent += '<a class="infobubble-arrow" title="to ' + feature.getProperty('Name') + '" href="' + url + '"><i class="icon-arrow-right"></i></a>';
         }
-        
+
         styledContent += "</div></div>";
-        
+
         return styledContent;
       }
-        
+
 
 	var doStyling = function(feature, hiddenLayers)
     {
         var icon = '';
-        var scaledSize = { width: 30, height:30, widthUnit: 'px', heightUnit: 'px'};
+        var scaledSize = { width: 25, height: 25 };
         var zoomLevel = map.getZoom();
         var strokeWeight = 2;
-		var strokeColor = '#f16021';
+    		var strokeColor = '#f16021';
 
-		if (zoomLevel >= 16){
-			icon = feature.getProperty('Feature Icon');
-			if (zoomLevel >=17){
-				if (zoomLevel >=18){
-					if (zoomLevel >=22){
+		if (zoomLevel >= 15){
+			icon = feature.getProperty('Feature Icon').replace('http://', 'https://');
+			if (zoomLevel >=17 ) {
+				if (zoomLevel >= 18 ){
+					if (zoomLevel >= 22 ){
 						strokeWeight = 10;
 					}
 				else strokeWeight = 8;
@@ -254,29 +256,31 @@ var webMap = function () {
 				else strokeWeight = 5;
 			}
 		}
-		else if (feature.getProperty('Small Icon'))
-	    {
-	      icon = feature.getProperty('Small Icon');
-	      scaledSize.width = 22;
-	      scaledSize.height = 22;
-	    }
+		else if (feature.getProperty('Small Icon')) {
+      icon = feature.getProperty('Small Icon').replace('http://', 'https://');
+      scaledSize.width = 22;
+      scaledSize.height = 22;
+    }
 
-	    if (hiddenLayers){
-	    	if (hiddenLayers.indexOf(feature.getProperty('Group')) > -1){
-	    		return {visible: false};
-	    	}
-	    }
+    if (hiddenLayers){
+    	if (hiddenLayers.indexOf(feature.getProperty('Group')) > -1){
+    		return {visible: false};
+    	}
+    }
 
-		return /** @type {google.maps.Data.StyleOptions} */({
-		  icon: {
-			url: icon,
-			scaledSize: scaledSize,
-			clickable: true,
-			anchor: new google.maps.Point(scaledSize.width/2,scaledSize.height/2)
-		  },
-		  strokeWeight: strokeWeight,
-		  strokeColor: strokeColor
-        });
+  		return /** @type {google.maps.Data.StyleOptions} */({
+        icon: {
+          url: icon,
+          scaledSize: new google.maps.Size(scaledSize.width, scaledSize.height),
+          size: new google.maps.Size(scaledSize.width, scaledSize.height),
+          anchor: new google.maps.Point(scaledSize.width/2, 3)
+        },
+        clickable: true,
+  		  strokeWeight: strokeWeight,
+  		  strokeColor: strokeColor,
+        fillOpacity: 1,
+        visible: true
+      });
     };
 
     //-------------------------Initializing the Map--------------------------//
@@ -300,18 +304,18 @@ var webMap = function () {
 
             // Adds geolocation functionality, including a custom control to center the user on their position
             //implementGeolocation();
-            
+
             map.data.loadGeoJson('https://script.google.com/macros/s/AKfycbzG3KL_qmQQfYeDpC-DOb8OMKfbZYWNZ0INiK3UmBg0TXk8J5Vb/exec?key=9DFDEB02-C10B-11E4-9F48-041CF186852F&type=geo');
             map.data.setStyle(doStyling);
-            
+
             google.maps.event.addListener(map, 'zoom_changed', function()
             {
                 map.data.setStyle(function(feature){
                 	return doStyling(feature, webMap.hiddenLayers);
                 });
             });
-            
-            
+
+
             // When the user clicks, set 'isColorful', changing the color of the letters.
             map.data.addListener('click', function(event) {
             	var data = event.feature;
@@ -332,7 +336,7 @@ var webMap = function () {
             webMap.getMap().setZoom(16);
             var bubble = prepareNewInfoBubble(JSON.parse(rawContent), newMapCenter);
             bubble.open();
-            
+
         },
 /*
 		turnOnLayer: function (layerKey){
